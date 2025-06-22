@@ -79,11 +79,14 @@ function renderVocabulary(vocab) {
 function renderKanjiLevels(levelsData, kanjiDescriptions) {
   const container = document.getElementById('levels-container');
   const descEl = document.getElementById('kanji-desc');
-  descEl.style.display = 'none';  // Hide kanji details initially
+  let activeLevel = null;
 
-  // Create the level cards with description
+  // Hide the kanji description initially
+  descEl.style.display = 'none';
+  container.style.display = 'flex'; // Ensure it's visible on load
+
+  // Render all level cards
   container.innerHTML = Object.keys(levelsData).map(level => {
-    // Find description for this level
     const descObj = kanjiDescriptions.find(k => k.char === level);
     const description = descObj ? descObj.romaji : "No description available";
 
@@ -96,35 +99,44 @@ function renderKanjiLevels(levelsData, kanjiDescriptions) {
     `;
   }).join('');
 
-  // Add click event listener to container for event delegation
+  // Click event for selecting a level
   container.addEventListener('click', e => {
     const card = e.target.closest('.kanji-level-card');
     if (!card) return;
 
-    // Remove active from all cards, add active to clicked one
-    container.querySelectorAll('.kanji-level-card').forEach(c => c.classList.remove('active'));
-    card.classList.add('active');
-
-    // Show the kanji description container
-    descEl.style.display = 'block';
-
     const level = card.getAttribute('data-level');
     const kanjiList = levelsData[level] || [];
 
-    // Render kanji list or a message if empty
-    if (kanjiList.length > 0) {
-      descEl.innerHTML = `<h3>${level} Kanji:</h3>` + kanjiList.map(k => `
-        <div class="kanji-item">
-          <span class="kanji-char">${k.char}</span>
-          <span class="kanji-meaning">${k.meaning}</span>
-        </div>
-      `).join('');
-    } else {
-      descEl.textContent = `No kanji data available for ${level}`;
-    }
+    activeLevel = level;
+
+    // Render the kanji list with a back button
+    descEl.innerHTML = `
+      <button id="back-to-levels" style="margin-bottom:1rem;">← Back to Levels</button>
+      <h3>${level} Kanji:</h3>
+      ${
+        kanjiList.length > 0
+          ? kanjiList.map(k => `
+              <div class="kanji-item">
+                <span class="kanji-char">${k.char}</span>
+                <span class="kanji-meaning">${k.meaning}</span>
+              </div>
+            `).join('')
+          : `<p>No kanji data available for ${level}</p>`
+      }
+    `;
+
+    // Hide levels, show kanji
+    container.style.display = 'none';
+    descEl.style.display = 'block';
+
+    // Enable back button
+    document.getElementById('back-to-levels').addEventListener('click', () => {
+      descEl.style.display = 'none';
+      container.style.display = 'flex'; // Or 'grid', depending on your layout
+      activeLevel = null;
+    });
   });
 }
-
 
 function renderQuiz(questions) {
   const section = document.getElementById('quiz');
