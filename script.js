@@ -51,16 +51,22 @@ function renderHiragana(hiragana) {
 function renderKatakana(katakana) {
   const section = document.getElementById('katakana');
   section.innerHTML = `<div class="card"><h2>Katakana</h2>
-    <div class="hiragana-grid">
-      ${katakana.characters.map(c => `
-        <div class="hiragana-char">
-          <div class="char-japanese">${c.char}</div>
-          <div class="char-romaji">${c.romaji}</div>
-        </div>
-      `).join('')}
-    </div>
+    ${Object.entries(katakana).map(([group, chars]) => `
+
+      <h3>${group}</h3>
+      <div class="katakana-grid">
+        ${chars.map(c => `
+          <div class="katakana-char">
+            <div class="char-japanese">${c.char}</div>
+            <div class="char-romaji">${c.romaji}</div>
+          </div>
+        `).join('')}
+      </div>
+
+    `).join('')}
   </div>`;
 }
+
 
 function renderVocabulary(vocab) {
   const section = document.getElementById('vocabulary');
