@@ -18,21 +18,23 @@
             padding: 0 20px;
         }
         
-        header {
-            background: linear-gradient(135deg, #f4d3de, #e38193);
+     header {
+            background-image:
+            url('PNG/pexels-tomas-malik-793526-3408354.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: #fdfffd;
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            
+       
             /* Animation */
             animation: slideDownFade 0.8s ease-out both;
-            
+       
             /* Darker, stronger blur text shadow */
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
-
-
 
         h1 {
             font-size: 3rem;
@@ -41,7 +43,6 @@
             margin-bottom: 0.5rem;
         }
    
-
       .subtitle {
           font-size: 1.2rem;
           font-weight: 700; /* changed from 300 to 700 for bold */
