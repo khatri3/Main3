@@ -9,7 +9,7 @@
       { "icon": "🎯", "title": "Test Knowledge", "desc": "Take quizzes and track your progress." }
     ]
   },
-   "hiragana": {
+ "hiragana": {
     "あ行": [
       { "char": "あ", "romaji": "a" },
       { "char": "い", "romaji": "i" },
@@ -82,16 +82,151 @@
     ],
     "ん": [
       { "char": "ん", "romaji": "n" }
+    ],
+    "が行": [
+      { "char": "が", "romaji": "ga" },
+      { "char": "ぎ", "romaji": "gi" },
+      { "char": "ぐ", "romaji": "gu" },
+      { "char": "げ", "romaji": "ge" },
+      { "char": "ご", "romaji": "go" }
+    ],
+    "ざ行": [
+      { "char": "ざ", "romaji": "za" },
+      { "char": "じ", "romaji": "ji" },
+      { "char": "ず", "romaji": "zu" },
+      { "char": "ぜ", "romaji": "ze" },
+      { "char": "ぞ", "romaji": "zo" }
+    ],
+    "だ行": [
+      { "char": "だ", "romaji": "da" },
+      { "char": "ぢ", "romaji": "ji" },
+      { "char": "づ", "romaji": "zu" },
+      { "char": "で", "romaji": "de" },
+      { "char": "ど", "romaji": "do" }
+    ],
+    "ば行": [
+      { "char": "ば", "romaji": "ba" },
+      { "char": "び", "romaji": "bi" },
+      { "char": "ぶ", "romaji": "bu" },
+      { "char": "べ", "romaji": "be" },
+      { "char": "ぼ", "romaji": "bo" }
+    ],
+    "ぱ行": [
+      { "char": "ぱ", "romaji": "pa" },
+      { "char": "ぴ", "romaji": "pi" },
+      { "char": "ぷ", "romaji": "pu" },
+      { "char": "ぺ", "romaji": "pe" },
+      { "char": "ぽ", "romaji": "po" }
     ]
-  }
-,
+  },
   "katakana": {
-    "characters": [
+    "ア行": [
       { "char": "ア", "romaji": "a" },
       { "char": "イ", "romaji": "i" },
       { "char": "ウ", "romaji": "u" },
       { "char": "エ", "romaji": "e" },
       { "char": "オ", "romaji": "o" }
+    ],
+    "カ行": [
+      { "char": "カ", "romaji": "ka" },
+      { "char": "キ", "romaji": "ki" },
+      { "char": "ク", "romaji": "ku" },
+      { "char": "ケ", "romaji": "ke" },
+      { "char": "コ", "romaji": "ko" }
+    ],
+    "サ行": [
+      { "char": "サ", "romaji": "sa" },
+      { "char": "シ", "romaji": "shi" },
+      { "char": "ス", "romaji": "su" },
+      { "char": "セ", "romaji": "se" },
+      { "char": "ソ", "romaji": "so" }
+    ],
+    "タ行": [
+      { "char": "タ", "romaji": "ta" },
+      { "char": "チ", "romaji": "chi" },
+      { "char": "ツ", "romaji": "tsu" },
+      { "char": "テ", "romaji": "te" },
+      { "char": "ト", "romaji": "to" }
+    ],
+    "ナ行": [
+      { "char": "ナ", "romaji": "na" },
+      { "char": "ニ", "romaji": "ni" },
+      { "char": "ヌ", "romaji": "nu" },
+      { "char": "ネ", "romaji": "ne" },
+      { "char": "ノ", "romaji": "no" }
+    ],
+    "ハ行": [
+      { "char": "ハ", "romaji": "ha" },
+      { "char": "ヒ", "romaji": "hi" },
+      { "char": "フ", "romaji": "fu" },
+      { "char": "ヘ", "romaji": "he" },
+      { "char": "ホ", "romaji": "ho" }
+    ],
+    "マ行": [
+      { "char": "マ", "romaji": "ma" },
+      { "char": "ミ", "romaji": "mi" },
+      { "char": "ム", "romaji": "mu" },
+      { "char": "メ", "romaji": "me" },
+      { "char": "モ", "romaji": "mo" }
+    ],
+    "ヤ行": [
+      { "char": "ヤ", "romaji": "ya" },
+      { "char": "", "romaji": "" },
+      { "char": "ユ", "romaji": "yu" },
+      { "char": "", "romaji": "" },
+      { "char": "ヨ", "romaji": "yo" }
+    ],
+    "ラ行": [
+      { "char": "ラ", "romaji": "ra" },
+      { "char": "リ", "romaji": "ri" },
+      { "char": "ル", "romaji": "ru" },
+      { "char": "レ", "romaji": "re" },
+      { "char": "ロ", "romaji": "ro" }
+    ],
+    "ワ行": [
+      { "char": "ワ", "romaji": "wa" },
+      { "char": "", "romaji": "" },
+      { "char": "", "romaji": "" },
+      { "char": "", "romaji": "" },
+      { "char": "ヲ", "romaji": "wo" }
+    ],
+    "ン": [
+      { "char": "ン", "romaji": "n" }
+    ],
+    "が行": [
+      { "char": "ガ", "romaji": "ga" },
+      { "char": "ギ", "romaji": "gi" },
+      { "char": "グ", "romaji": "gu" },
+      { "char": "ゲ", "romaji": "ge" },
+      { "char": "ゴ", "romaji": "go" }
+    ],
+    "ざ行": [
+      { "char": "ザ", "romaji": "za" },
+      { "char": "ジ", "romaji": "ji" },
+      { "char": "ズ", "romaji": "zu" },
+      { "char": "ゼ", "romaji": "ze" },
+      { "char": "ゾ", "romaji": "zo" }
+    ],
+    "だ行": [
+      { "char": "ダ", "romaji": "da" },
+      { "char": "ヂ", "romaji": "ji" },
+      { "char": "ヅ", "romaji": "zu" },
+      { "char": "デ", "romaji": "de" },
+      { "char": "ド", "romaji": "do" }
+    ],
+    "ば行": [
+      { "char": "バ", "romaji": "ba" },
+      { "char": "ビ", "romaji": "bi" },
+      { "char": "ブ", "romaji": "bu" },
+      { "char": "ベ", "romaji": "be" },
+      { "char": "ボ", "romaji": "bo" }
+    ],
+    "ぱ行": [
+      { "char": "パ", "romaji": "pa" },
+      { "char": "ピ", "romaji": "pi" },
+      { "char": "プ", "romaji": "pu" },
+      { "char": "ペ", "romaji": "pe" },
+      { "char": "ポ", "romaji": "po" }
     ]
   },
   "vocabulary": {
