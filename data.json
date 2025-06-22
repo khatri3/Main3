@@ -250,10 +250,30 @@
       "options": ["すみません", "ありがとう", "さようなら", "おはよう"],
       "correct": 1
     }
+ ],
+ 
+  "Kanji": [
+    { "char": "N5", "romaji": "beginner" },
+    { "char": "N4", "romaji": "Elementary" },
+    { "char": "N3", "romaji": "Intermediate" },
+    { "char": "N2", "romaji": "Pre-advanced" },
+    { "char": "N1", "romaji": "Advanced" }
   ],
-  "progress": {
-    "Hiragana": 45,
-    "Katakana": 30,
-    "Vocabulary": 60
-  }
+
+"KanjiLevels": {
+  "N5": [
+    { "char": "日", "meaning": "Sun, day" },
+    { "char": "人", "meaning": "Person" },
+    { "char": "山", "meaning": "Mountain" }
+  ],
+  "N4": [
+    { "char": "海", "meaning": "Sea" },
+    { "char": "川", "meaning": "River" }
+  ],
+  "N3": [],
+  "N2": [],
+  "N1": []
 }
+}
+
+

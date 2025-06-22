@@ -1,413 +1,430 @@
-/* Your full CSS code from <style> in HTML */
+/* ========== Base Reset ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* ... rest of your styles ... */
-       body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #FAFAFA;
-            color: #333333;
-            line-height: 1.6;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-         header {
-        background-image: url('PNG/pexels-tomas-malik-793526-3408354.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    
-        color: #fdfffd;
-        padding: 2rem 1rem;
-        text-align: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    
-        /* Animation */
-        animation: slideDownFade 0.8s ease-out both;
-    
-        /* 3D Text Shadow */
-        text-shadow: 
-            1px 1px 0 #000,   /* Thin black shadow */
-            2px 2px 2px #444, /* Soft grey base layer */
-            3px 3px 3px rgba(0, 0, 0, 0.5), /* deeper shadow */
-            4px 4px 4px rgba(0, 0, 0, 0.4); /* even deeper for 3D effect */
-    }
+/* ========== Typography & Body ========== */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FAFAFA;
+  color: #333333;
+  line-height: 1.6;
+}
 
+h1 {
+  font-size: 3rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
 
-        h1 {
-            font-size: 3rem;
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-   
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  opacity: 0.95;
+}
 
-      .subtitle {
-          font-size: 1.2rem;
-          font-weight: 700; /* changed from 300 to 700 for bold */
-          font-family: 'Merriweather', serif;
-          opacity: 0.95; /* slightly higher opacity for clearer visibility */
-      }
+/* ========== Layout ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+main {
+  padding: 2rem 0;
+}
 
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+.section {
+  display: none;
+  animation: fadeIn 0.5s ease-in;
+}
 
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-        }
+.section.active {
+  display: block;
+}
 
-        .nav-menu li {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-        .nav-menu li:hover, .nav-menu li.active {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-        main {
-            padding: 2rem 0;
-        }
+/* ========== Header ========== */
+header {
+  background: linear-gradient(135deg, #f4d3de, #e38193);
+  color: #fffdfd;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDownFade 0.8s ease-out both;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
 
-        .section {
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-        }
+/* ========== Navigation ========== */
+nav {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-        .section.active {
-            display: block;
-        }
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.nav-menu li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.nav-menu li:hover,
+.nav-menu li.active {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
+/* ========== Cards & Grid ========== */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
-        .japanese-text {
-            font-size: 3rem;
-            text-align: center;
-            margin: 1rem 0;
-            color: #667eea;
-            font-weight: 300;
-        }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-        .lesson-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
+/* ========== Character Grids ========== */
+.hiragana-grid,
+.kanji-grid,
+.katakana-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
-        .lesson-item:hover {
-            background: #f8f9ff;
-            transform: translateX(10px);
-        }
+.hiragana-char,
+.kanji-char,
+.katakana-char {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-        .quiz-container {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+.hiragana-char:hover,
+.kanji-char:hover,
+.katakana-char:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: scale(1.1);
+}
 
-        .quiz-question {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #667eea;
-        }
+.char-japanese {
+  font-size: 2rem;
+  color: #667eea;
+  font-weight: 300;
+}
 
-        .quiz-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
+.char-romaji {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
 
-        .quiz-option {
-            padding: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
+/* ========== Lesson ========== */
+.lesson-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
 
-        .quiz-option:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-            transform: scale(1.05);
-        }
+.lesson-item:hover {
+  background: #f8f9ff;
+  transform: translateX(10px);
+}
 
-        .quiz-option.correct {
-            background: #4CAF50;
-            color: white;
-            border-color: #4CAF50;
-        }
+/* ========== Quiz ========== */
+.quiz-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-        .quiz-option.incorrect {
-            background: #f44336;
-            color: white;
-            border-color: #f44336;
-        }
+.quiz-question {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #667eea;
+}
 
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Roboto', sans-serif;
-        }
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
+.quiz-option {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
-        .progress-bar {
-            width: 100%;
-            height: 10px;
-            background: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 1rem 0;
-        }
+.quiz-option:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: scale(1.05);
+}
 
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            width: 0%;
-            transition: width 0.5s ease;
-        }
+.quiz-option.correct {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
 
-        .hiragana-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+.quiz-option.incorrect {
+  background: #f44336;
+  color: white;
+  border-color: #f44336;
+}
 
-        .hiragana-char {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-weight: bold;
-        }
+/* ========== Buttons ========== */
+.btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
 
-        .hiragana-char:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-            transform: scale(1.1);
-        }
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
 
-        .katakana-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+/* ========== Japanese Header Text ========== */
+.japanese-text {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: #667eea;
+  font-weight: 300;
+}
 
-        .katakana-char {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .katakana-char:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-            transform: scale(1.1);
-        }
-
-        .char-japanese {
-            font-size: 2rem;
-            color: #667eea;
-            font-weight: 300;
-        }
-
-        .char-romaji {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .quiz-options {
-                grid-template-columns: 1fr;
-            }
-        }
-/* Tablet & Small Screens */
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    .nav-item {
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-    }
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
 
-    .subtitle {
-        font-size: 1rem;
-        text-align: center;
-    }
+  .nav-item {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
+  .card-grid,
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
 
-    .quiz-options {
-        grid-template-columns: 1fr;
-    }
+  .hiragana-grid,
+  .kanji-grid,
+  .katakana-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.5rem;
+  }
 
-    .hiragana-grid,
-    .katakana-grid {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-        gap: 0.5rem;
-    }
+  .hiragana-char,
+  .kanji-char,
+  .katakana-char {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
 
-    .hiragana-char,
-    .katakana-char {
-        padding: 0.7rem;
-        font-size: 1rem;
-    }
+  .char-japanese {
+    font-size: 1.5rem;
+  }
 
-    .char-japanese {
-        font-size: 1.5rem;
-    }
+  .char-romaji {
+    font-size: 0.8rem;
+  }
 
-    .char-romaji {
-        font-size: 0.8rem;
-    }
+  .quiz-question {
+    font-size: 1.6rem;
+  }
 
-    .quiz-question {
-        font-size: 1.6rem;
-    }
-
-    .btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-    }
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
 
-/* Mobile Phones (≤ 480px) */
 @media (max-width: 480px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-    }
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
 
-    .container {
-        padding: 0 10px;
-    }
+  .container {
+    padding: 0 10px;
+  }
 
-    .card {
-        padding: 1rem;
-    }
+  .card {
+    padding: 1rem;
+  }
 
-    .quiz-question {
-        font-size: 1.3rem;
-    }
+  .quiz-question {
+    font-size: 1.3rem;
+  }
 
-    .btn {
-        width: 100%;
-        font-size: 1rem;
-    }
+  .quiz-option {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
 
-    .quiz-option {
-        font-size: 0.95rem;
-        padding: 0.75rem;
-    }
+  .char-japanese {
+    font-size: 1.3rem;
+  }
 
-    .char-japanese {
-        font-size: 1.3rem;
-    }
+  .char-romaji {
+    font-size: 0.75rem;
+  }
 
-    .char-romaji {
-        font-size: 0.75rem;
-    }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
 }
+
+.kanji-level-card {
+  display: inline-block;
+  width: 160px;
+  padding: 1rem;
+  margin: 0.5rem;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px #f4d3de;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kanji-level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #00c3ff;
+}
+
+.kanji-level-card.active {
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(102, 126, 234, 0.5);
+}
+
+.kanji-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kanji-char {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.kanji-meaning {
+  font-size: 1rem;
+  color: #333;
+}
+#kanji-desc {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-left: 4px solid #667eea;
+  background: #f8f9ff;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #444;
+  transition: all 0.3s ease;
+  display: none;  /* HIDE BY DEFAULT */
+}
+#levels-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;       /* space between cards */
+  justify-content: center;
+}
+.kanji-level-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem; /* increased from 1.3rem to 1.8rem */
+  font-weight: bold;
+}
+
+
+
 

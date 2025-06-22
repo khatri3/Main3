@@ -7,11 +7,10 @@ async function loadApp() {
   renderKatakana(data.katakana);
   renderVocabulary(data.vocabulary);
   renderQuiz(data.quiz);
-  renderProgress(data.progress);
+  renderKanjiLevels(data.KanjiLevels, data.Kanji);
   setupNavigation();
 }
 
-// Example: Render Home
 function renderHome(home) {
   const el = document.getElementById('home');
   el.innerHTML = `
@@ -31,7 +30,6 @@ function renderHome(home) {
   `;
 }
 
-// Similar rendering functions:
 function renderHiragana(hiragana) {
   const section = document.getElementById('hiragana');
   section.innerHTML = `<div class="card"><h2>Hiragana</h2>
@@ -52,7 +50,6 @@ function renderKatakana(katakana) {
   const section = document.getElementById('katakana');
   section.innerHTML = `<div class="card"><h2>Katakana</h2>
     ${Object.entries(katakana).map(([group, chars]) => `
-
       <h3>${group}</h3>
       <div class="katakana-grid">
         ${chars.map(c => `
@@ -62,11 +59,9 @@ function renderKatakana(katakana) {
           </div>
         `).join('')}
       </div>
-
     `).join('')}
   </div>`;
 }
-
 
 function renderVocabulary(vocab) {
   const section = document.getElementById('vocabulary');
@@ -80,6 +75,56 @@ function renderVocabulary(vocab) {
     `).join('')}
   `;
 }
+
+function renderKanjiLevels(levelsData, kanjiDescriptions) {
+  const container = document.getElementById('levels-container');
+  const descEl = document.getElementById('kanji-desc');
+  descEl.style.display = 'none';  // Hide kanji details initially
+
+  // Create the level cards with description
+  container.innerHTML = Object.keys(levelsData).map(level => {
+    // Find description for this level
+    const descObj = kanjiDescriptions.find(k => k.char === level);
+    const description = descObj ? descObj.romaji : "No description available";
+
+    return `
+      <div class="kanji-level-card" data-level="${level}">
+        <h3>${level}</h3>
+        <p class="level-desc">${description}</p>
+        <p>Click to see</p>
+      </div>
+    `;
+  }).join('');
+
+  // Add click event listener to container for event delegation
+  container.addEventListener('click', e => {
+    const card = e.target.closest('.kanji-level-card');
+    if (!card) return;
+
+    // Remove active from all cards, add active to clicked one
+    container.querySelectorAll('.kanji-level-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+
+    // Show the kanji description container
+    descEl.style.display = 'block';
+
+    const level = card.getAttribute('data-level');
+    const kanjiList = levelsData[level] || [];
+
+    // Render kanji list or a message if empty
+    if (kanjiList.length > 0) {
+      descEl.innerHTML = `<h3>${level} Kanji:</h3>` + kanjiList.map(k => `
+        <div class="kanji-item">
+          <span class="kanji-char">${k.char}</span>
+          <span class="kanji-meaning">${k.meaning}</span>
+        </div>
+      `).join('');
+    } else {
+      descEl.textContent = `No kanji data available for ${level}`;
+    }
+  });
+}
+
 
 function renderQuiz(questions) {
   const section = document.getElementById('quiz');
@@ -99,35 +144,11 @@ function renderQuiz(questions) {
     </div>
   `;
   quizData = questions;
+  currentQuestion = 0;
+  score = 0;
   loadQuestion();
 }
 
-function renderProgress(progress) {
-  const section = document.getElementById('progress');
-  section.innerHTML = `
-    <div class="card"><h2>Progress</h2>
-    ${Object.entries(progress).map(([key, val]) => `
-      <p>${key}: <progress value="${val}" max="100"></progress> ${val}%</p>
-    `).join('')}
-    </div>
-  `;
-}
-
-function setupNavigation() {
-  const navItems = document.querySelectorAll('.nav-item');
-  const sections = document.querySelectorAll('.section');
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      navItems.forEach(i => i.classList.remove('active'));
-      sections.forEach(s => s.classList.remove('active'));
-      item.classList.add('active');
-      const id = item.getAttribute('data-section');
-      document.getElementById(id).classList.add('active');
-    });
-  });
-}
-
-// Quiz logic (same as before)
 let quizData = [], currentQuestion = 0, score = 0;
 
 function loadQuestion() {
@@ -159,9 +180,23 @@ function nextQuestion() {
 function restartQuiz() {
   currentQuestion = 0;
   score = 0;
-  document.getElementById('quiz-content').style.display = 'block';
   document.getElementById('quiz-result').style.display = 'none';
+  document.getElementById('quiz-content').style.display = 'block';
   loadQuestion();
+}
+
+function setupNavigation() {
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('.section');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navItems.forEach(i => i.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      item.classList.add('active');
+      const id = item.getAttribute('data-section');
+      document.getElementById(id).classList.add('active');
+    });
+  });
 }
 
 loadApp();
