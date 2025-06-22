@@ -22,7 +22,7 @@
             background-image: 
             url('PNG/pexels-tomas-malik-793526-3408354.jpg'); /* Replace with your image path */
             background-size: cover;
-            background-position: 20% 80%;
+            background-position: center;
             color: #fdfffd;
             padding: 2rem 1rem;
             text-align: center;
