@@ -36,7 +36,7 @@ function renderHiragana(hiragana) {
   // Build the HTML content for the Hiragana chart
   section.innerHTML = `
     <div class="card">
-      <h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[ Tap or click for sound 🔊 ]</h2>
+      <h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With sound🔊]</h2>
       ${Object.entries(hiragana).map(([group, chars]) => `
         <h3>${group}</h3>
         <div class="hiragana-grid">
@@ -86,7 +86,7 @@ function renderHiragana(hiragana) {
 
 function renderKatakana(katakana) {
   const section = document.getElementById('katakana');
-  section.innerHTML = `<div class="card"><h2>katakana-Chart&nbsp;&nbsp;&nbsp;[ Tap or click for sound🔊]</h2>
+  section.innerHTML = `<div class="card"><h2>katakana-Chart&nbsp;&nbsp;&nbsp;[With sound🔊]</h2>
     ${Object.entries(katakana).map(([group, chars]) => `
       <h3>${group}</h3>
       <div class="katakana-grid">
