@@ -93,7 +93,7 @@
     "ざ(ZA)": [
       { "char": "ざ", "romaji": "za","audio": "audio/za.mp3" },
       { "char": "じ", "romaji": "ji","audio": "audio/ji.mp3" },
-      { "char": "ず", "romaji": "zu","audio": "audio/zi.mp3" },
+      { "char": "ず", "romaji": "zu","audio": "audio/zu.mp3" },
       { "char": "ぜ", "romaji": "ze","audio": "audio/ze.mp3" },
       { "char": "ぞ", "romaji": "zo","audio": "audio/zo.mp3" }
     ],
@@ -122,10 +122,10 @@
   "katakana": {
     "ア(A)": [
       { "char": "ア", "romaji": "a","audio": "audio/a.mp3" },
-      { "char": "イ", "romaji": "i","audio": "audio/a.mp3" },
-      { "char": "ウ", "romaji": "u","audio": "audio/a.mp3" },
-      { "char": "エ", "romaji": "e","audio": "audio/a.mp3" },
-      { "char": "オ", "romaji": "o","audio": "audio/a.mp3" }
+      { "char": "イ", "romaji": "i","audio": "audio/i.mp3" },
+      { "char": "ウ", "romaji": "u","audio": "audio/u.mp3" },
+      { "char": "エ", "romaji": "e","audio": "audio/e.mp3" },
+      { "char": "オ", "romaji": "o","audio": "audio/o.mp3" }
     ],
     "カ(KA)": [
       { "char": "カ", "romaji": "ka","audio": "audio/ka.mp3" },
@@ -136,7 +136,7 @@
     ],
     "サ(SA)": [
       { "char": "サ", "romaji": "sa","audio": "audio/sa.mp3" },
-      { "char": "シ", "romaji": "shi","audio": "audio/shi.mp3" },
+      { "char": "シ", "romaji": "shi","audio": "audio/si.mp3" },
       { "char": "ス", "romaji": "su","audio": "audio/su.mp3" },
       { "char": "セ", "romaji": "se","audio": "audio/se.mp3" },
       { "char": "ソ", "romaji": "so","audio": "audio/so.mp3" }
