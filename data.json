@@ -121,7 +121,7 @@
   },
   "katakana": {
     "ア(A)": [
-      { "char": "ア", "romaji": "a" },
+      { "char": "ア", "romaji": "a","audio": "audio/a.mp3" },
       { "char": "イ", "romaji": "i" },
       { "char": "ウ", "romaji": "u" },
       { "char": "エ", "romaji": "e" },

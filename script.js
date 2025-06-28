@@ -79,14 +79,39 @@ function renderKatakana(katakana) {
       <div class="katakana-grid">
         ${chars.map(c => `
           <div class="katakana-char">
-            <div class="char-japanese">${c.char}</div>
+            <div class="char-japanese" data-audio="${c.audio}">${c.char}</div>
             <div class="char-romaji">${c.romaji}</div>
           </div>
         `).join('')}
       </div>
     `).join('')}
   </div>`;
+
+  const chars = section.querySelectorAll('.char-japanese');
+  const audioPlayer = new Audio();
+
+  chars.forEach(charEl => {
+    ['mouseenter', 'click'].forEach(event => {
+      charEl.addEventListener(event, () => {
+        const src = charEl.getAttribute('data-audio');
+        if (!src) return;
+
+        if (audioPlayer.src !== src) {
+          audioPlayer.pause();
+          audioPlayer.src = src;
+        }
+
+        audioPlayer.currentTime = 0;
+        audioPlayer.play().catch(err => {
+          if (err.name !== 'AbortError') {
+            console.error('Audio play error:', err);
+          }
+        });
+      });
+    });
+  });
 }
+
 
 function renderVocabulary(vocab) {
   const section = document.getElementById('vocabulary');
