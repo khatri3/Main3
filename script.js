@@ -100,16 +100,24 @@ function renderKatakana(katakana) {
     `).join('')}
   </div>`;
 
-  const chars = section.querySelectorAll('.char-japanese');
+  // Initialize a single reusable audio player
   const audioPlayer = new Audio();
+  audioPlayer.preload = 'auto'; // or 'none' if needed
 
+  // Select all characters with audio
+  const chars = section.querySelectorAll('.char-japanese');
+
+  // Attach audio play behavior
   chars.forEach(charEl => {
     ['mouseenter', 'click'].forEach(event => {
       charEl.addEventListener(event, () => {
         const src = charEl.getAttribute('data-audio');
         if (!src) return;
 
-        if (audioPlayer.src !== src) {
+        const currentSrc = audioPlayer.src.split('/').pop(); // filename only
+        const newSrc = src.split('/').pop();
+
+        if (currentSrc !== newSrc) {
           audioPlayer.pause();
           audioPlayer.src = src;
         }
@@ -124,7 +132,6 @@ function renderKatakana(katakana) {
     });
   });
 }
-
 
 function renderVocabulary(vocab) {
   const section = document.getElementById('vocabulary');
