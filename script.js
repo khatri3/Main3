@@ -32,18 +32,43 @@ function renderHome(home) {
 
 function renderHiragana(hiragana) {
   const section = document.getElementById('hiragana');
+
   section.innerHTML = `<div class="card"><h2>Hiragana</h2>
     ${Object.entries(hiragana).map(([group, chars]) => `
       <h3>${group}</h3>
       <div class="hiragana-grid">
         ${chars.map(c => `
           <div class="hiragana-char">
-            <div class="char-japanese">${c.char}</div>
+            <div class="char-japanese" data-audio="${c.audio}">${c.char}</div>
             <div class="char-romaji">${c.romaji}</div>
           </div>`).join('')}
       </div>
     `).join('')}
   </div>`;
+
+const chars = section.querySelectorAll('.char-japanese');
+const audioPlayer = new Audio();
+
+chars.forEach(charEl => {
+  ['mouseenter', 'click'].forEach(event => {
+    charEl.addEventListener(event, () => {
+      const src = charEl.getAttribute('data-audio');
+      if (!src) return; // Skip if no audio defined
+
+      if (audioPlayer.src !== src) {
+        audioPlayer.pause();
+        audioPlayer.src = src;
+      }
+
+      audioPlayer.currentTime = 0;
+      audioPlayer.play().catch(err => {
+        if (err.name !== 'AbortError') {
+          console.error('Audio play error:', err);
+        }
+      });
+    });
+  });
+});
 }
 
 function renderKatakana(katakana) {

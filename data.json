@@ -11,7 +11,7 @@
   },
  "hiragana": {
     "あ(A)": [
-      { "char": "あ", "romaji": "a" },
+      { "char": "あ", "romaji": "a","audio": "audio/a.mp3" },
       { "char": "い", "romaji": "i" },
       { "char": "う", "romaji": "u" },
       { "char": "え", "romaji": "e" },
