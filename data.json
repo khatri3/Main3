@@ -232,7 +232,22 @@
   "vocabulary": {
     "Greetings": [
       { "jp": "こんにちは", "romaji": "konnichiwa", "en": "Hello" },
-      { "jp": "おはよう", "romaji": "ohayou", "en": "Good morning" }
+      { "jp": "おはようございます", "romaji": "Ohayou gozaimasu", "en": "Good morning (formal)" }
+      { "jp": "おはよう", "romaji": "Ohayou", "en": "Good morning (casual)" }
+      { "jp": "こんばんは", "romaji": "Konbanwa", "en": "Good evening" }
+      { "jp": "おやすみなさい", "romaji": "Oyasuminasai", "en": "Good night (formal)" }
+      { "jp": "おやすみ", "romaji": "Oyasumi", "en": "Good night (casual)" }
+      { "jp": "はじめまして", "romaji": "Hajimemashite", "en": "Nice to meet you (first time)" }
+      { "jp": "よろしくおねがいします", "romaji": "Yoroshiku onegaishimasu", "en": "Please treat me well / Nice to meet you" }
+      { "jp": "さようなら", "romaji": "Sayounara", "en": "Goodbye (formal)" }
+      { "jp": "じゃあね", "romaji": "Jya ne", "en": "See you / Bye (casual)" }
+      { "jp": "またね", "romaji": "Mata ne", "en": "See you again" }
+      { "jp": "いってきます", "romaji": "Ittekimasu", "en": "I'm leaving (used when leaving home)" }
+      { "jp": "いってらっしゃい", "romaji": "Itterasshai", "en": "Take care (said to someone leaving)" }
+      { "jp": "ただいま", "romaji": "Tadaima", "en": "I’m home (when returning)" }
+      { "jp": "おかえりなさい", "romaji": "Okaerinasai", "en": "Welcome back (to home)" }
+      
+  
     ],
     "Phrases": [
       { "jp": "ありがとう", "romaji": "arigatou", "en": "Thank you" },
