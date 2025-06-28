@@ -12,221 +12,221 @@
  "hiragana": {
     "あ(A)": [
       { "char": "あ", "romaji": "a","audio": "audio/a.mp3" },
-      { "char": "い", "romaji": "i" },
-      { "char": "う", "romaji": "u" },
-      { "char": "え", "romaji": "e" },
-      { "char": "お", "romaji": "o" }
+      { "char": "い", "romaji": "i","audio": "audio/i.mp3" },
+      { "char": "う", "romaji": "u","audio": "audio/u.mp3" },
+      { "char": "え", "romaji": "e","audio": "audio/e.mp3" },
+      { "char": "お", "romaji": "o","audio": "audio/o.mp3" }
     ],
     "か(KA)": [
-      { "char": "か", "romaji": "ka" },
-      { "char": "き", "romaji": "ki" },
-      { "char": "く", "romaji": "ku" },
-      { "char": "け", "romaji": "ke" },
-      { "char": "こ", "romaji": "ko" }
+      { "char": "か", "romaji": "ka","audio": "audio/ka.mp3" },
+      { "char": "き", "romaji": "ki","audio": "audio/ki.mp3" },
+      { "char": "く", "romaji": "ku","audio": "audio/ku.mp3" },
+      { "char": "け", "romaji": "ke","audio": "audio/ke.mp3" },
+      { "char": "こ", "romaji": "ko","audio": "audio/ko.mp3" }
     ],
     "さ(SA)": [
-      { "char": "さ", "romaji": "sa" },
-      { "char": "し", "romaji": "shi" },
-      { "char": "す", "romaji": "su" },
-      { "char": "せ", "romaji": "se" },
-      { "char": "そ", "romaji": "so" }
+      { "char": "さ", "romaji": "sa","audio": "audio/sa.mp3" },
+      { "char": "し", "romaji": "shi","audio": "audio/si.mp3" },
+      { "char": "す", "romaji": "su","audio": "audio/su.mp3" },
+      { "char": "せ", "romaji": "se","audio": "audio/se.mp3" },
+      { "char": "そ", "romaji": "so","audio": "audio/so.mp3" }
     ],
     "た(TA)": [
-      { "char": "た", "romaji": "ta" },
-      { "char": "ち", "romaji": "chi" },
-      { "char": "つ", "romaji": "tsu" },
-      { "char": "て", "romaji": "te" },
-      { "char": "と", "romaji": "to" }
+      { "char": "た", "romaji": "ta","audio": "audio/ta.mp3" },
+      { "char": "ち", "romaji": "chi","audio": "audio/chi.mp3" },
+      { "char": "つ", "romaji": "tsu","audio": "audio/tsu.mp3" },
+      { "char": "て", "romaji": "te","audio": "audio/te.mp3" },
+      { "char": "と", "romaji": "to","audio": "audio/to.mp3" }
     ],
     "な(NA)": [
-      { "char": "な", "romaji": "na" },
-      { "char": "に", "romaji": "ni" },
-      { "char": "ぬ", "romaji": "nu" },
-      { "char": "ね", "romaji": "ne" },
-      { "char": "の", "romaji": "no" }
+      { "char": "な", "romaji": "na","audio": "audio/na.mp3" },
+      { "char": "に", "romaji": "ni","audio": "audio/ni.mp3" },
+      { "char": "ぬ", "romaji": "nu","audio": "audio/nu.mp3" },
+      { "char": "ね", "romaji": "ne","audio": "audio/ne.mp3" },
+      { "char": "の", "romaji": "no","audio": "audio/no.mp3" }
     ],
     "は(HA)": [
-      { "char": "は", "romaji": "ha" },
-      { "char": "ひ", "romaji": "hi" },
-      { "char": "ふ", "romaji": "fu" },
-      { "char": "へ", "romaji": "he" },
-      { "char": "ほ", "romaji": "ho" }
+      { "char": "は", "romaji": "ha","audio": "audio/ha.mp3" },
+      { "char": "ひ", "romaji": "hi","audio": "audio/hi.mp3" },
+      { "char": "ふ", "romaji": "fu","audio": "audio/fu.mp3" },
+      { "char": "へ", "romaji": "he","audio": "audio/he.mp3" },
+      { "char": "ほ", "romaji": "ho","audio": "audio/ho.mp3" }
     ],
     "ま(MA)": [
-      { "char": "ま", "romaji": "ma" },
-      { "char": "み", "romaji": "mi" },
-      { "char": "む", "romaji": "mu" },
-      { "char": "め", "romaji": "me" },
-      { "char": "も", "romaji": "mo" }
+      { "char": "ま", "romaji": "ma","audio": "audio/ma.mp3" },
+      { "char": "み", "romaji": "mi","audio": "audio/mi.mp3" },
+      { "char": "む", "romaji": "mu","audio": "audio/mu.mp3" },
+      { "char": "め", "romaji": "me","audio": "audio/me.mp3" },
+      { "char": "も", "romaji": "mo","audio": "audio/mo.mp3" }
     ],
     "や(YA)": [
-      { "char": "や", "romaji": "ya" },
+      { "char": "や", "romaji": "ya","audio": "audio/ya.mp3" },
       { "char": "", "romaji": "" },
-      { "char": "ゆ", "romaji": "yu" },
+      { "char": "ゆ", "romaji": "yu","audio": "audio/yu.mp3" },
       { "char": "", "romaji": "" },
-      { "char": "よ", "romaji": "yo" }
+      { "char": "よ", "romaji": "yo","audio": "audio/yo.mp3" }
     ],
     "ら(RA)": [
-      { "char": "ら", "romaji": "ra" },
-      { "char": "り", "romaji": "ri" },
-      { "char": "る", "romaji": "ru" },
-      { "char": "れ", "romaji": "re" },
-      { "char": "ろ", "romaji": "ro" }
+      { "char": "ら", "romaji": "ra","audio": "audio/ra.mp3" },
+      { "char": "り", "romaji": "ri","audio": "audio/ri.mp3" },
+      { "char": "る", "romaji": "ru","audio": "audio/ru.mp3" },
+      { "char": "れ", "romaji": "re","audio": "audio/re.mp3" },
+      { "char": "ろ", "romaji": "ro","audio": "audio/ro.mp3" }
     ],
     "わ(WA)": [
-      { "char": "わ", "romaji": "wa" },
+      { "char": "わ", "romaji": "wa","audio": "audio/wa.mp3" },
       { "char": "", "romaji": "" },
       { "char": "", "romaji": "" },
       { "char": "", "romaji": "" },
-      { "char": "を", "romaji": "wo" }
+      { "char": "を", "romaji": "wo","audio": "audio/wo.mp3" }
     ],
     "ん(N)": [
-      { "char": "ん", "romaji": "n" }
+      { "char": "ん", "romaji": "n","audio": "audio/n.mp3" }
     ],
     "が(GA)": [
-      { "char": "が", "romaji": "ga" },
-      { "char": "ぎ", "romaji": "gi" },
-      { "char": "ぐ", "romaji": "gu" },
-      { "char": "げ", "romaji": "ge" },
-      { "char": "ご", "romaji": "go" }
+      { "char": "が", "romaji": "ga","audio": "audio/ga.mp3" },
+      { "char": "ぎ", "romaji": "gi","audio": "audio/gi.mp3" },
+      { "char": "ぐ", "romaji": "gu","audio": "audio/gu.mp3" },
+      { "char": "げ", "romaji": "ge","audio": "audio/ge.mp3" },
+      { "char": "ご", "romaji": "go","audio": "audio/go.mp3" }
     ],
     "ざ(ZA)": [
-      { "char": "ざ", "romaji": "za" },
-      { "char": "じ", "romaji": "ji" },
-      { "char": "ず", "romaji": "zu" },
-      { "char": "ぜ", "romaji": "ze" },
-      { "char": "ぞ", "romaji": "zo" }
+      { "char": "ざ", "romaji": "za","audio": "audio/za.mp3" },
+      { "char": "じ", "romaji": "ji","audio": "audio/ji.mp3" },
+      { "char": "ず", "romaji": "zu","audio": "audio/zi.mp3" },
+      { "char": "ぜ", "romaji": "ze","audio": "audio/ze.mp3" },
+      { "char": "ぞ", "romaji": "zo","audio": "audio/zo.mp3" }
     ],
     "だ(DA)": [
-      { "char": "だ", "romaji": "da" },
-      { "char": "ぢ", "romaji": "ji" },
-      { "char": "づ", "romaji": "zu" },
-      { "char": "で", "romaji": "de" },
-      { "char": "ど", "romaji": "do" }
+      { "char": "だ", "romaji": "da","audio": "audio/da.mp3" },
+      { "char": "ぢ", "romaji": "ji","audio": "audio/ji.mp3" },
+      { "char": "づ", "romaji": "zu","audio": "audio/zu.mp3" },
+      { "char": "で", "romaji": "de","audio": "audio/de.mp3" },
+      { "char": "ど", "romaji": "do","audio": "audio/do.mp3" }
     ],
     "ば(BA)": [
-      { "char": "ば", "romaji": "ba" },
-      { "char": "び", "romaji": "bi" },
-      { "char": "ぶ", "romaji": "bu" },
-      { "char": "べ", "romaji": "be" },
-      { "char": "ぼ", "romaji": "bo" }
+      { "char": "ば", "romaji": "ba","audio": "audio/ba.mp3" },
+      { "char": "び", "romaji": "bi","audio": "audio/bi.mp3" },
+      { "char": "ぶ", "romaji": "bu","audio": "audio/bu.mp3" },
+      { "char": "べ", "romaji": "be","audio": "audio/be.mp3" },
+      { "char": "ぼ", "romaji": "bo","audio": "audio/bo.mp3" }
     ],
     "ぱ(PA)": [
-      { "char": "ぱ", "romaji": "pa" },
-      { "char": "ぴ", "romaji": "pi" },
-      { "char": "ぷ", "romaji": "pu" },
-      { "char": "ぺ", "romaji": "pe" },
-      { "char": "ぽ", "romaji": "po" }
+      { "char": "ぱ", "romaji": "pa","audio": "audio/pa.mp3" },
+      { "char": "ぴ", "romaji": "pi","audio": "audio/pi.mp3" },
+      { "char": "ぷ", "romaji": "pu","audio": "audio/pu.mp3" },
+      { "char": "ぺ", "romaji": "pe","audio": "audio/pe.mp3" },
+      { "char": "ぽ", "romaji": "po","audio": "audio/po.mp3" }
     ]
   },
   "katakana": {
     "ア(A)": [
       { "char": "ア", "romaji": "a","audio": "audio/a.mp3" },
-      { "char": "イ", "romaji": "i" },
-      { "char": "ウ", "romaji": "u" },
-      { "char": "エ", "romaji": "e" },
-      { "char": "オ", "romaji": "o" }
+      { "char": "イ", "romaji": "i","audio": "audio/a.mp3" },
+      { "char": "ウ", "romaji": "u","audio": "audio/a.mp3" },
+      { "char": "エ", "romaji": "e","audio": "audio/a.mp3" },
+      { "char": "オ", "romaji": "o","audio": "audio/a.mp3" }
     ],
     "カ(KA)": [
-      { "char": "カ", "romaji": "ka" },
-      { "char": "キ", "romaji": "ki" },
-      { "char": "ク", "romaji": "ku" },
-      { "char": "ケ", "romaji": "ke" },
-      { "char": "コ", "romaji": "ko" }
+      { "char": "カ", "romaji": "ka","audio": "audio/ka.mp3" },
+      { "char": "キ", "romaji": "ki","audio": "audio/ki.mp3" },
+      { "char": "ク", "romaji": "ku","audio": "audio/ku.mp3" },
+      { "char": "ケ", "romaji": "ke","audio": "audio/ke.mp3" },
+      { "char": "コ", "romaji": "ko","audio": "audio/ko.mp3" }
     ],
     "サ(SA)": [
-      { "char": "サ", "romaji": "sa" },
-      { "char": "シ", "romaji": "shi" },
-      { "char": "ス", "romaji": "su" },
-      { "char": "セ", "romaji": "se" },
-      { "char": "ソ", "romaji": "so" }
+      { "char": "サ", "romaji": "sa","audio": "audio/sa.mp3" },
+      { "char": "シ", "romaji": "shi","audio": "audio/shi.mp3" },
+      { "char": "ス", "romaji": "su","audio": "audio/su.mp3" },
+      { "char": "セ", "romaji": "se","audio": "audio/se.mp3" },
+      { "char": "ソ", "romaji": "so","audio": "audio/so.mp3" }
     ],
     "タ(TA)": [
-      { "char": "タ", "romaji": "ta" },
-      { "char": "チ", "romaji": "chi" },
-      { "char": "ツ", "romaji": "tsu" },
-      { "char": "テ", "romaji": "te" },
-      { "char": "ト", "romaji": "to" }
+      { "char": "タ", "romaji": "ta","audio": "audio/ta.mp3" },
+      { "char": "チ", "romaji": "chi","audio": "audio/chi.mp3" },
+      { "char": "ツ", "romaji": "tsu","audio": "audio/tsu.mp3" },
+      { "char": "テ", "romaji": "te","audio": "audio/te.mp3" },
+      { "char": "ト", "romaji": "to","audio": "audio/to.mp3" }
     ],
     "ナ(NA)": [
-      { "char": "ナ", "romaji": "na" },
-      { "char": "ニ", "romaji": "ni" },
-      { "char": "ヌ", "romaji": "nu" },
-      { "char": "ネ", "romaji": "ne" },
-      { "char": "ノ", "romaji": "no" }
+      { "char": "ナ", "romaji": "na","audio": "audio/na.mp3" },
+      { "char": "ニ", "romaji": "ni","audio": "audio/ni.mp3" },
+      { "char": "ヌ", "romaji": "nu","audio": "audio/nu.mp3" },
+      { "char": "ネ", "romaji": "ne","audio": "audio/ne.mp3" },
+      { "char": "ノ", "romaji": "no","audio": "audio/no.mp3" }
     ],
     "ハ(HA)": [
-      { "char": "ハ", "romaji": "ha" },
-      { "char": "ヒ", "romaji": "hi" },
-      { "char": "フ", "romaji": "fu" },
-      { "char": "ヘ", "romaji": "he" },
-      { "char": "ホ", "romaji": "ho" }
+      { "char": "ハ", "romaji": "ha","audio": "audio/ha.mp3" },
+      { "char": "ヒ", "romaji": "hi","audio": "audio/hi.mp3" },
+      { "char": "フ", "romaji": "fu","audio": "audio/fu.mp3" },
+      { "char": "ヘ", "romaji": "he","audio": "audio/he.mp3" },
+      { "char": "ホ", "romaji": "ho","audio": "audio/ho.mp3" }
     ],
     "マ(MA)": [
-      { "char": "マ", "romaji": "ma" },
-      { "char": "ミ", "romaji": "mi" },
-      { "char": "ム", "romaji": "mu" },
-      { "char": "メ", "romaji": "me" },
-      { "char": "モ", "romaji": "mo" }
+      { "char": "マ", "romaji": "ma","audio": "audio/ma.mp3" },
+      { "char": "ミ", "romaji": "mi","audio": "audio/mi.mp3" },
+      { "char": "ム", "romaji": "mu","audio": "audio/mu.mp3" },
+      { "char": "メ", "romaji": "me","audio": "audio/me.mp3" },
+      { "char": "モ", "romaji": "mo","audio": "audio/mo.mp3" }
     ],
     "ヤ(YA)": [
-      { "char": "ヤ", "romaji": "ya" },
+      { "char": "ヤ", "romaji": "ya","audio": "audio/ya.mp3" },
       { "char": "", "romaji": "" },
-      { "char": "ユ", "romaji": "yu" },
+      { "char": "ユ", "romaji": "yu","audio": "audio/yu.mp3" },
       { "char": "", "romaji": "" },
-      { "char": "ヨ", "romaji": "yo" }
+      { "char": "ヨ", "romaji": "yo","audio": "audio/yo.mp3" }
     ],
     "ラ(RA)": [
-      { "char": "ラ", "romaji": "ra" },
-      { "char": "リ", "romaji": "ri" },
-      { "char": "ル", "romaji": "ru" },
-      { "char": "レ", "romaji": "re" },
-      { "char": "ロ", "romaji": "ro" }
+      { "char": "ラ", "romaji": "ra","audio": "audio/ra.mp3" },
+      { "char": "リ", "romaji": "ri","audio": "audio/ri.mp3" },
+      { "char": "ル", "romaji": "ru","audio": "audio/ru.mp3" },
+      { "char": "レ", "romaji": "re","audio": "audio/re.mp3" },
+      { "char": "ロ", "romaji": "ro","audio": "audio/ro.mp3" }
     ],
     "ワ(WA)": [
-      { "char": "ワ", "romaji": "wa" },
+      { "char": "ワ", "romaji": "wa","audio": "audio/wa.mp3" },
       { "char": "", "romaji": "" },
       { "char": "", "romaji": "" },
       { "char": "", "romaji": "" },
-      { "char": "ヲ", "romaji": "wo" }
+      { "char": "ヲ", "romaji": "wo","audio": "audio/wo.mp3" }
     ],
     "ン(N)": [
-      { "char": "ン", "romaji": "n" }
+      { "char": "ン", "romaji": "n","audio": "audio/n.mp3" }
     ],
     "が(GA)": [
-      { "char": "ガ", "romaji": "ga" },
-      { "char": "ギ", "romaji": "gi" },
-      { "char": "グ", "romaji": "gu" },
-      { "char": "ゲ", "romaji": "ge" },
-      { "char": "ゴ", "romaji": "go" }
+      { "char": "ガ", "romaji": "ga","audio": "audio/ga.mp3" },
+      { "char": "ギ", "romaji": "gi","audio": "audio/gi.mp3" },
+      { "char": "グ", "romaji": "gu","audio": "audio/gu.mp3" },
+      { "char": "ゲ", "romaji": "ge","audio": "audio/ge.mp3" },
+      { "char": "ゴ", "romaji": "go","audio": "audio/go.mp3"}
     ],
     "ざ(ZA)": [
-      { "char": "ザ", "romaji": "za" },
-      { "char": "ジ", "romaji": "ji" },
-      { "char": "ズ", "romaji": "zu" },
-      { "char": "ゼ", "romaji": "ze" },
-      { "char": "ゾ", "romaji": "zo" }
+      { "char": "ザ", "romaji": "za","audio": "audio/za.mp3" },
+      { "char": "ジ", "romaji": "ji","audio": "audio/ji.mp3" },
+      { "char": "ズ", "romaji": "zu","audio": "audio/zu.mp3" },
+      { "char": "ゼ", "romaji": "ze","audio": "audio/ze.mp3" },
+      { "char": "ゾ", "romaji": "zo","audio": "audio/zo.mp3" }
     ],
     "だ(DA)": [
-      { "char": "ダ", "romaji": "da" },
-      { "char": "ヂ", "romaji": "ji" },
-      { "char": "ヅ", "romaji": "zu" },
-      { "char": "デ", "romaji": "de" },
-      { "char": "ド", "romaji": "do" }
+      { "char": "ダ", "romaji": "da","audio": "audio/da.mp3" },
+      { "char": "ヂ", "romaji": "ji","audio": "audio/ji.mp3" },
+      { "char": "ヅ", "romaji": "zu","audio": "audio/zu.mp3" },
+      { "char": "デ", "romaji": "de","audio": "audio/de.mp3" },
+      { "char": "ド", "romaji": "do","audio": "audio/do.mp3"}
     ],
     "ば(BA)": [
-      { "char": "バ", "romaji": "ba" },
-      { "char": "ビ", "romaji": "bi" },
-      { "char": "ブ", "romaji": "bu" },
-      { "char": "ベ", "romaji": "be" },
-      { "char": "ボ", "romaji": "bo" }
+      { "char": "バ", "romaji": "ba","audio": "audio/ba.mp3" },
+      { "char": "ビ", "romaji": "bi","audio": "audio/bi.mp3" },
+      { "char": "ブ", "romaji": "bu","audio": "audio/bu.mp3" },
+      { "char": "ベ", "romaji": "be","audio": "audio/be.mp3" },
+      { "char": "ボ", "romaji": "bo","audio": "audio/bo.mp3" }
     ],
     "ぱ(PA)": [
-      { "char": "パ", "romaji": "pa" },
-      { "char": "ピ", "romaji": "pi" },
-      { "char": "プ", "romaji": "pu" },
-      { "char": "ペ", "romaji": "pe" },
-      { "char": "ポ", "romaji": "po" }
+      { "char": "パ", "romaji": "pa","audio": "audio/pa.mp3" },
+      { "char": "ピ", "romaji": "pi","audio": "audio/pi.mp3" },
+      { "char": "プ", "romaji": "pu","audio": "audio/pu.mp3" },
+      { "char": "ペ", "romaji": "pe","audio": "audio/pe.mp3" },
+      { "char": "ポ", "romaji": "po","audio": "audio/po.mp3" }
     ]
   },
   "vocabulary": {
