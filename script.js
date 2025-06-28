@@ -109,21 +109,54 @@ function renderKanjiLevels(levelsData, kanjiDescriptions) {
 
     activeLevel = level;
 
-    // Render the kanji list with a back button
-    descEl.innerHTML = `
-      <button id="back-to-levels" style="margin-bottom:1rem;">← Back to Levels</button>
-      <h3>${level} Kanji:</h3>
-      ${
-        kanjiList.length > 0
-          ? kanjiList.map(k => `
-              <div class="kanji-item">
-                <span class="kanji-char">${k.char}</span>
-                <span class="kanji-meaning">${k.meaning}</span>
-              </div>
-            `).join('')
-          : `<p>No kanji data available for ${level}</p>`
-      }
-    `;
+ descEl.innerHTML = `
+  <button id="back-to-levels" style="margin-bottom:1rem;">← Back to Levels</button>
+  <h3>${level} Kanji:</h3>
+  <input type="text" id="kanji-search" placeholder="Search kanji meaning or Nepali..." style="margin-bottom:1rem; padding: 0.5rem; width: 100%; box-sizing: border-box;"/>
+  <div id="kanji-list">
+    ${
+      kanjiList.length > 0
+        ? kanjiList.map(k => `
+            <div class="kanji-item">
+              <span class="kanji-char">${k.char}</span>
+              <span class="kanji-furigana">${k.furigana}</span>
+              <span class="kanji-meaning">${k.meaning}</span>
+              <span class="kanji-nepali">${k.nepali}</span>
+            </div>
+          `).join('')
+        : `<p>No kanji data available for ${level}</p>`
+    }
+  </div>
+`;
+
+// Add this right here:
+const searchInput = document.getElementById('kanji-search');
+const kanjiListContainer = document.getElementById('kanji-list');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+
+  const kanjiItems = kanjiListContainer.querySelectorAll('.kanji-item');
+
+  kanjiItems.forEach(item => {
+    const meaning = item.querySelector('.kanji-meaning').textContent.toLowerCase();
+    const nepali = item.querySelector('.kanji-nepali').textContent.toLowerCase();
+    const char = item.querySelector('.kanji-char').textContent.toLowerCase();
+    const furigana = item.querySelector('.kanji-furigana').textContent.toLowerCase();
+
+    if (
+      meaning.includes(query) ||
+      nepali.includes(query) ||
+      char.includes(query) ||
+      furigana.includes(query)   // <-- add this line
+    ) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+
 
     // Hide levels, show kanji
     container.style.display = 'none';

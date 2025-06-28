@@ -370,6 +370,7 @@ nav {
 }
 
 .kanji-level-card {
+  
   display: inline-block;
   width: 160px;
   padding: 1rem;
@@ -398,18 +399,16 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  border-bottom: 1px solid #ccc;  /* adds a line below each item */
+  padding-bottom: 0.5rem;
 }
 
-.kanji-char {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #667eea;
+
+.kanji-char, .kanji-furigana, .kanji-meaning, .kanji-nepali {
+  font-family: 'Roboto', sans-serif;
+  transform: none;
 }
 
-.kanji-meaning {
-  font-size: 1rem;
-  color: #333;
-}
 #kanji-desc {
   margin-top: 2rem;
   padding: 1rem;

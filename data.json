@@ -252,28 +252,60 @@
     }
  ],
  
-  "Kanji": [
-    { "char": "N5", "romaji": "beginner" },
+"Kanji": [
+    { "char": "N5", "romaji": "Beginner" },
     { "char": "N4", "romaji": "Elementary" },
     { "char": "N3", "romaji": "Intermediate" },
     { "char": "N2", "romaji": "Pre-advanced" },
     { "char": "N1", "romaji": "Advanced" }
   ],
-
-"KanjiLevels": {
+  "KanjiLevels": {
   "N5": [
-    { "char": "日", "meaning": "Sun, day" },
-    { "char": "人", "meaning": "Person" },
-    { "char": "山", "meaning": "Mountain" }
+    { "char": "日", "furigana": "にち", "meaning": "Sun, day", "nepali": "सूर्य, दिन" },
+    { "char": "人", "furigana": "ひと", "meaning": "Person", "nepali": "मानिस" },
+    { "char": "山", "furigana": "やま", "meaning": "Mountain", "nepali": "पहाड" },
+    { "char": "川", "furigana": "かわ", "meaning": "River", "nepali": "नदी" },
+    { "char": "田", "furigana": "た", "meaning": "Rice field", "nepali": "धान खेत" },
+    { "char": "口", "furigana": "くち", "meaning": "Mouth", "nepali": "मुख" },
+    { "char": "目", "furigana": "め", "meaning": "Eye", "nepali": "आँखा" },
+    { "char": "耳", "furigana": "みみ", "meaning": "Ear", "nepali": "कान" },
+    { "char": "手", "furigana": "て", "meaning": "Hand", "nepali": "हात" },
+    { "char": "足", "furigana": "あし", "meaning": "Foot, leg", "nepali": "खुट्टा" }
   ],
-  "N4": [
-    { "char": "海", "meaning": "Sea" },
-    { "char": "川", "meaning": "River" }
-  ],
-  "N3": [],
-  "N2": [],
-  "N1": []
-}
+    "N4": [
+      { "char": "海", "meaning": "Sea", "nepali": "समुन्द्र" },
+      { "char": "空", "meaning": "Sky, empty", "nepali": "आकाश, खाली" },
+      { "char": "駅", "meaning": "Station", "nepali": "स्टेसन" },
+      { "char": "電", "meaning": "Electricity", "nepali": "बिजुली" },
+      { "char": "車", "meaning": "Car", "nepali": "गाडी" },
+      { "char": "校", "meaning": "School", "nepali": "विद्यालय" },
+      { "char": "店", "meaning": "Shop", "nepali": "पसल" },
+      { "char": "買", "meaning": "Buy", "nepali": "किन्नु" },
+      { "char": "読", "meaning": "Read", "nepali": "पढ्नु" },
+      { "char": "川", "meaning": "River", "nepali": "नदी" }
+    ],
+    "N3": [
+      { "char": "覚", "meaning": "Remember", "nepali": "स्मरण गर्नु" },
+      { "char": "感", "meaning": "Feeling", "nepali": "भावना" },
+      { "char": "情", "meaning": "Emotion", "nepali": "सम्वेग" },
+      { "char": "想", "meaning": "Think, idea", "nepali": "विचार" },
+      { "char": "期", "meaning": "Period, term", "nepali": "अवधि" }
+    ],
+    "N2": [
+      { "char": "際", "meaning": "Occasion, edge", "nepali": "अवसर, किनारा" },
+      { "char": "導", "meaning": "Guide, lead", "nepali": "मार्गदर्शन गर्नु" },
+      { "char": "達", "meaning": "Accomplish, reach", "nepali": "पुग्नु, प्राप्त गर्नु" },
+      { "char": "構", "meaning": "Construct, mind", "nepali": "निर्माण, वास्ता गर्नु" },
+      { "char": "済", "meaning": "Finish, come to an end", "nepali": "पूरा गर्नु, समाप्त हुनु" }
+    ],
+    "N1": [
+      { "char": "曖", "meaning": "Unclear, vague", "nepali": "अस्पष्ट" },
+      { "char": "昧", "meaning": "Obscure, dark", "nepali": "अन्धकार, अस्पष्टता" },
+      { "char": "躍", "meaning": "Leap, dance", "nepali": "उफ्रनु, नाच्नु" },
+      { "char": "賦", "meaning": "Levy, allocate", "nepali": "कर लगाउनु, बाँडफाँड गर्नु" },
+      { "char": "巌", "meaning": "Rock, crag", "nepali": "ठूलो चट्टान, पहाडको पर्खाल" }
+    ]
+  }
 }
 
 
