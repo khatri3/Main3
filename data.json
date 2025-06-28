@@ -246,8 +246,6 @@
       { "jp": "いってらっしゃい", "romaji": "Itterasshai", "en": "Take care (said to someone leaving)" },
       { "jp": "ただいま", "romaji": "Tadaima", "en": "I’m home (when returning)" },
       { "jp": "おかえりなさい", "romaji": "Okaerinasai", "en": "Welcome back (to home)" }
-      
-  
     ],
     "Phrases": [
       { "jp": "ありがとう", "romaji": "arigatou", "en": "Thank you" },
