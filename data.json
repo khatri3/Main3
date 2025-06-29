@@ -230,7 +230,7 @@
     ]
   },
 
-"vocabulary": {
+"words": {
   "犬": [{ "romaji": "いぬ", "en": "dog", "np": "कुकुर" }],
   "猫": [{ "romaji": "ねこ", "en": "cat", "np": "बिरालो" }],
   "人": [{ "romaji": "ひと", "en": "person", "np": "मान्छे" }],
