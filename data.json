@@ -229,23 +229,58 @@
       { "char": "ポ", "romaji": "po","audio": "audio/po.mp3" }
     ]
   },
-  "vocabulary": {
-    "いぬ": [
-      { "romaji": "いぬ", "en": "dog", "np": "कुकुर" }
-    ],
-    "学校": [
-      { "romaji": "がっこう", "en": "school", "np": "विद्यालय" }
-    ],
-    "勉強": [
-      { "romaji": "べんきょう", "en": "study", "np": "पढाइ" }
-    ],
-    "経済": [
-      { "romaji": "けいざい", "en": "economy", "np": "अर्थतन्त्र" }
-    ],
-    "哲学": [
-      { "romaji": "てつがく", "en": "philosophy", "np": "दर्शनशास्त्र" }
-    ]
-  },
+
+"vocabulary": {
+  "犬": [{ "romaji": "いぬ", "en": "dog", "np": "कुकुर" }],
+  "猫": [{ "romaji": "ねこ", "en": "cat", "np": "बिरालो" }],
+  "人": [{ "romaji": "ひと", "en": "person", "np": "मान्छे" }],
+  "友達": [{ "romaji": "ともだち", "en": "friend", "np": "साथी" }],
+  "学校": [{ "romaji": "がっこう", "en": "school", "np": "विद्यालय" }],
+  "先生": [{ "romaji": "せんせい", "en": "teacher", "np": "शिक्षक" }],
+  "学生": [{ "romaji": "がくせい", "en": "student", "np": "विद्यार्थी" }],
+  "水": [{ "romaji": "みず", "en": "water", "np": "पानी" }],
+  "食べ物": [{ "romaji": "たべもの", "en": "food", "np": "खाना" }],
+  "飲み物": [{ "romaji": "のみもの", "en": "drink", "np": "पेय" }],
+  "車": [{ "romaji": "くるま", "en": "car", "np": "गाडी" }],
+  "自転車": [{ "romaji": "じてんしゃ", "en": "bicycle", "np": "साइकल" }],
+  "電車": [{ "romaji": "でんしゃ", "en": "train", "np": "रेलगाडी" }],
+  "電話": [{ "romaji": "でんわ", "en": "phone", "np": "फोन" }],
+  "家": [{ "romaji": "いえ", "en": "house", "np": "घर" }],
+  "部屋": [{ "romaji": "へや", "en": "room", "np": "कोठा" }],
+  "時計": [{ "romaji": "とけい", "en": "clock", "np": "घडी" }],
+  "傘": [{ "romaji": "かさ", "en": "umbrella", "np": "छाता" }],
+  "本": [{ "romaji": "ほん", "en": "book", "np": "पुस्तक" }],
+  "新聞": [{ "romaji": "しんぶん", "en": "newspaper", "np": "समाचारपत्र" }],
+  "靴": [{ "romaji": "くつ", "en": "shoes", "np": "जुत्ता" }],
+  "帽子": [{ "romaji": "ぼうし", "en": "hat", "np": "टोपी" }],
+  "手": [{ "romaji": "て", "en": "hand", "np": "हात" }],
+  "足": [{ "romaji": "あし", "en": "foot/leg", "np": "खुट्टा" }],
+  "顔": [{ "romaji": "かお", "en": "face", "np": "अनुहार" }],
+  "耳": [{ "romaji": "みみ", "en": "ear", "np": "कान" }],
+  "目": [{ "romaji": "め", "en": "eye", "np": "आँखा" }],
+  "鼻": [{ "romaji": "はな", "en": "nose", "np": "नाक" }],
+  "口": [{ "romaji": "くち", "en": "mouth", "np": "मुख" }],
+  "頭": [{ "romaji": "あたま", "en": "head", "np": "टाउको" }],
+  "朝": [{ "romaji": "あさ", "en": "morning", "np": "बिहान" }],
+  "昼": [{ "romaji": "ひる", "en": "noon", "np": "दिउँसो" }],
+  "夜": [{ "romaji": "よる", "en": "night", "np": "रात" }],
+  "日": [{ "romaji": "ひ", "en": "day/sun", "np": "दिन/घाम" }],
+  "月": [{ "romaji": "つき", "en": "moon", "np": "चन्द्रमा" }],
+  "星": [{ "romaji": "ほし", "en": "star", "np": "तारा" }],
+  "天気": [{ "romaji": "てんき", "en": "weather", "np": "मौसम" }],
+  "雨": [{ "romaji": "あめ", "en": "rain", "np": "पानी पर्नु" }],
+  "雪": [{ "romaji": "ゆき", "en": "snow", "np": "हिउँ" }],
+  "風": [{ "romaji": "かぜ", "en": "wind", "np": "हावा" }],
+  "花": [{ "romaji": "はな", "en": "flower", "np": "फूल" }],
+  "木": [{ "romaji": "き", "en": "tree", "np": "रुख" }],
+  "草": [{ "romaji": "くさ", "en": "grass", "np": "घाँस" }],
+  "鳥": [{ "romaji": "とり", "en": "bird", "np": "चरा" }],
+  "魚": [{ "romaji": "さかな", "en": "fish", "np": "माछा" }],
+  "海": [{ "romaji": "うみ", "en": "sea/ocean", "np": "समुद्र" }],
+  "川": [{ "romaji": "かわ", "en": "river", "np": "नदी" }],
+  "山": [{ "romaji": "やま", "en": "mountain", "np": "पहाड" }]
+},
+
 
   "quiz": [
     {
