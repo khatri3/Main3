@@ -34,6 +34,7 @@ h1 {
   padding: 0 20px;
 }
 
+
 main {
   padding: 2rem 0;
 }
@@ -112,6 +113,15 @@ nav {
 
 /* ========== Cards & Grid ========== */
 .card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card2 {
   background: white;
   border-radius: 15px;
   padding: 2rem;
@@ -451,6 +461,89 @@ nav {
 #back-to-levels:active {
   transform: scale(0.98);
 }
+
+/* Vocabulary Container - full width with center padding */
+.vocab-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+}
+
+/* Responsive Grid */
+.words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Word Card */
+.word-card {
+  background: #fff;
+  border: 1.5px solid #232325;
+  border-radius: 12px;
+  padding: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  user-select: none;
+}
+
+.word-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+}
+
+/* Selected state */
+.word-card.selected {
+  background-color: #f0f4ff;
+  border-color: #e27da2;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .words-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .words-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+.word-card p:first-child {
+  font-size: 2.4rem;         /* Large kanji or Japanese word */
+  font-weight: 100;
+  color: #2b2d42;            /* Dark blue-gray, easy on eyes */
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
+  margin-bottom: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.word-card p:nth-child(2) {
+  /* Furigana (romaji) */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #6365d2;             /* Soft purple-blue */
+  margin-bottom: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.word-card p:nth-child(3) {
+  /* English meaning */
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #444444;             /* Dark gray for easy reading */
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
 
 
 
