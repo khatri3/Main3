@@ -11,6 +11,7 @@ body {
   background-color: #FAFAFA;
   color: #333333;
   line-height: 1.6;
+  overflow: hidden; /* Prevents whole page scrolling */
 }
 
 h1 {
@@ -33,7 +34,6 @@ h1 {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 
 main {
   padding: 2rem 0;
@@ -61,22 +61,17 @@ main {
 
 /* ========== Header ========== */
 header {
-            background-image:
-            url('PNG/pexels-tomas-malik-793526-3408354.jpg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fdfffd;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-       
-            /* Animation */
-            animation: slideDownFade 0.8s ease-out both;
-       
-            /* Darker, stronger blur text shadow */
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-        }
+  background-image: url('PNG/pexels-tomas-malik-793526-3408354.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fdfffd;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDownFade 0.8s ease-out both;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
 
 /* ========== Navigation ========== */
 nav {
@@ -376,11 +371,9 @@ nav {
     width: 100%;
     font-size: 1rem;
   }
-
 }
 
 .kanji-level-card {
-  
   display: inline-block;
   width: 160px;
   padding: 1rem;
@@ -412,7 +405,6 @@ nav {
   border-bottom: 1px solid #ccc;  /* adds a line below each item */
   padding-bottom: 0.5rem;
 }
-
 
 .kanji-char, .kanji-furigana, .kanji-meaning, .kanji-nepali {
   font-family: 'Roboto', sans-serif;
@@ -469,58 +461,88 @@ nav {
   width: 100%;
 }
 
-    .word-popup {
-      position: absolute;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 1.1rem;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      user-select: none;
-      max-width: 150px;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-      pointer-events: none;
-      max-width: 200px;
-      min-width: 120px;
-      box-sizing: border-box;
-      padding: 0.8rem;
-      overflow-wrap: break-word;
-    }
+.word-popup {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  max-width: 150px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  max-width: 200px;
+  min-width: 120px;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  overflow-wrap: break-word;
+}
 
-    .word-popup.visible {
-      display: flex;
-      opacity: 1;
-      pointer-events: auto;
-    }
+.word-popup.visible {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
 
-    .card input#words-search {
-      margin: 1rem 0;
-      padding: 0.5rem;
-      width: 100%;
-      font-size: 1.2rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
+.card input#words-search {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
-    .word-popup p {
-      margin: 0.2rem 0;
-    }
+.word-popup p {
+  margin: 0.2rem 0;
+}
 
-    .romaji { color: #555; }
-    .en { color: #007acc; font-weight: 500; }
-    .np { color: #e6abbe; font-weight: 600; }
+.romaji { color: #555; }
+.en { color: #007acc; font-weight: 500; }
+.np { color: #e6abbe; font-weight: 600; }
 
-    .search-bar {
+.search-bar {
   margin: 1rem 0;
   padding: 0.5rem;
   width: 50%;
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+/* ======= ADDED MOBILE NAV FIX ======= */
+
+/* Remove overflow hidden from body on mobile so page scrolls */
+@media (max-width: 768px) {
+  body {
+    overflow: auto !important;
+  }
+}
+
+/* Mobile navigation fixes */
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column;
+    max-height: 150px;      /* Limit nav height */
+    overflow-y: auto;       /* Enable vertical scroll inside nav */
+    padding-right: 10px;    /* Padding to avoid scrollbar overlap */
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
 }
