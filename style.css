@@ -520,29 +520,27 @@ nav {
 /* ======= ADDED MOBILE NAV FIX ======= */
 
 /* Remove overflow hidden from body on mobile so page scrolls */
-@media (max-width: 768px) {
-  body {
-    overflow: auto !important;
-  }
-}
-
-/* Mobile navigation fixes */
 @media (max-width: 480px) {
   .nav-menu {
     flex-direction: column;
     max-height: 150px;      /* Limit nav height */
     overflow-y: auto;       /* Enable vertical scroll inside nav */
     padding-right: 10px;    /* Padding to avoid scrollbar overlap */
+    align-items: flex-start; /* Align items to left, not stretched */
   }
 
   .nav-item {
-    width: 100%;
-    text-align: center;
-    padding: 0.4rem 0.8rem;
+    /* Remove width: 100%; so it doesn’t stretch full width */
+    padding: 0.4rem 1.2rem; /* horizontal padding for nice spacing */
     font-size: 0.9rem;
+    white-space: nowrap;    /* prevent text from breaking to next line */
+    border-bottom: 1px solid #eee;
+    border-radius: 25px;    /* keep pill shape */
+    margin-bottom: 0.3rem;  /* spacing between items */
   }
 
-  .nav-item:not(:last-child) {
-    border-bottom: 1px solid #eee;
+  .nav-item:last-child {
+    border-bottom: none;
   }
 }
+
