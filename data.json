@@ -230,28 +230,23 @@
     ]
   },
   "vocabulary": {
-    "Greetings": [
-      { "jp": "こんにちは", "romaji": "konnichiwa", "en": "Hello" },
-      { "jp": "おはようございます", "romaji": "Ohayou gozaimasu", "en": "Good morning (formal)" },
-      { "jp": "おはよう", "romaji": "Ohayou", "en": "Good morning (casual)" },
-      { "jp": "こんばんは", "romaji": "Konbanwa", "en": "Good evening" },
-      { "jp": "おやすみなさい", "romaji": "Oyasuminasai", "en": "Good night (formal)" },
-      { "jp": "おやすみ", "romaji": "Oyasumi", "en": "Good night (casual)" },
-      { "jp": "はじめまして", "romaji": "Hajimemashite", "en": "Nice to meet you (first time)" },
-      { "jp": "よろしくおねがいします", "romaji": "Yoroshiku onegaishimasu", "en": "Please treat me well / Nice to meet you" },
-      { "jp": "さようなら", "romaji": "Sayounara", "en": "Goodbye (formal)" },
-      { "jp": "じゃあね", "romaji": "Jya ne", "en": "See you / Bye (casual)" },
-      { "jp": "またね", "romaji": "Mata ne", "en": "See you again" },
-      { "jp": "いってきます", "romaji": "Ittekimasu", "en": "I'm leaving (used when leaving home)" },
-      { "jp": "いってらっしゃい", "romaji": "Itterasshai", "en": "Take care (said to someone leaving)" },
-      { "jp": "ただいま", "romaji": "Tadaima", "en": "I’m home (when returning)" },
-      { "jp": "おかえりなさい", "romaji": "Okaerinasai", "en": "Welcome back (to home)" }
+    "いぬ": [
+      { "romaji": "いぬ", "en": "dog", "np": "कुकुर" }
     ],
-    "Phrases": [
-      { "jp": "ありがとう", "romaji": "arigatou", "en": "Thank you" },
-      { "jp": "すみません", "romaji": "sumimasen", "en": "Excuse me / Sorry" }
+    "学校": [
+      { "romaji": "がっこう", "en": "school", "np": "विद्यालय" }
+    ],
+    "勉強": [
+      { "romaji": "べんきょう", "en": "study", "np": "पढाइ" }
+    ],
+    "経済": [
+      { "romaji": "けいざい", "en": "economy", "np": "अर्थतन्त्र" }
+    ],
+    "哲学": [
+      { "romaji": "てつがく", "en": "philosophy", "np": "दर्शनशास्त्र" }
     ]
   },
+
   "quiz": [
     {
       "question": "What does 'こんにちは' mean?",
