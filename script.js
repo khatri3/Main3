@@ -2,33 +2,179 @@ async function loadApp() {
   const res = await fetch('data.json');
   const data = await res.json();
 
-  renderHome(data.home);
+  renderHome(data.home, data.words);
   renderHiragana(data.hiragana);
   renderKatakana(data.katakana);
-  renderVocabulary(data.vocabulary);
   renderQuiz(data.quiz);
   renderKanjiLevels(data.KanjiLevels, data.Kanji);
   setupNavigation();
 }
 
-function renderHome(home) {
+function renderHome(home, words) {
   const el = document.getElementById('home');
   el.innerHTML = `
+    <input
+      id="words-search"
+      type="text"
+      placeholder="🔍 Search your words..."
+      class="search-bar"
+    />
+
     <div class="card">
       <div class="japanese-text">${home.welcome}</div>
       <h2>${home.title}</h2>
       <p>${home.description}</p>
     </div>
-    <div class="card-grid">
-      ${home.features.map(f => `
-        <div class="card">
-          <h3>${f.icon} ${f.title}</h3>
-          <p>${f.desc}</p>
-        </div>
-      `).join('')}
+
+    <div id="words-popup-container">
+      ${
+        Object.entries(words).map(([jpWord, entries]) => `
+          <div class="word-popup"
+               data-jp="${jpWord.toLowerCase()}"
+               data-romaji="${entries.map(e => e.romaji.toLowerCase()).join(' ')}"
+               data-en="${entries.map(e => e.en.toLowerCase()).join(' ')}"
+               data-np="${entries.map(e => e.np.toLowerCase()).join(' ')}">
+            <p><strong>${jpWord}</strong></p>
+            <p class="romaji">${entries.map(e => e.romaji).join(' / ')}</p>
+            <p class="en">${entries.map(e => e.en).join(' / ')}</p>
+            <p class="np">${entries.map(e => e.np).join(' / ')}</p>
+          </div>
+        `).join('')
+      }
     </div>
   `;
+
+  const popupContainer = document.getElementById('words-popup-container');
+  const searchInput = document.getElementById('words-search');
+  const wordElements = Array.from(popupContainer.querySelectorAll('.word-popup'));
+
+  let animationInterval = null;
+
+  function hideAllWords() {
+    wordElements.forEach(el => el.classList.remove('visible'));
+  }
+
+  function isOverlapping(el1, el2) {
+    const r1 = el1.getBoundingClientRect();
+    const r2 = el2.getBoundingClientRect();
+    return !(
+      r1.right < r2.left ||
+      r1.left > r2.right ||
+      r1.bottom < r2.top ||
+      r1.top > r2.bottom
+    );
+  }
+
+function showMultipleRandomWords() {
+  hideAllWords();
+  
+  const popupHeight = 300;
+  const popupWidth = 200;
+  const margin = 10;
+
+  const maxTop = popupContainer.clientHeight - popupHeight - margin;
+  const maxLeft = popupContainer.clientWidth - popupWidth - margin;
+
+  console.log('maxLeft, maxTop:', maxLeft, maxTop);
+
+  // If container is too small, don't try positioning
+  if (maxTop <= 0 || maxLeft <= 0) {
+    console.warn('Popup container too small to position words. Aborting showMultipleRandomWords.');
+    return;
+  }
+
+  const count = Math.min(3, wordElements.length);
+  const chosen = [];
+  const alreadyPlaced = [];
+
+  for (let i = 0; i < count; i++) {
+    let placed = false;
+    let attempt = 0;
+    while (attempt < 20 && !placed) {
+      const idx = Math.floor(Math.random() * wordElements.length);
+      const word = wordElements[idx];
+
+      if (chosen.includes(word)) {
+        attempt++;
+        continue;
+      }
+
+      const top = Math.random() * maxTop + margin;
+      const left = Math.random() * maxLeft + margin;
+
+      word.style.top = `${top}px`;
+      word.style.left = `${left}px`;
+      word.style.display = 'flex';
+
+      placed = !alreadyPlaced.some(other => isOverlapping(word, other));
+
+      if (placed) {
+        word.classList.add('visible');
+        chosen.push(word);
+        alreadyPlaced.push(word);
+      } else {
+        word.style.display = 'none';
+      }
+
+      attempt++;
+    }
+  }
 }
+
+
+function startAnimation() {
+  console.log('Starting animation');
+  stopAnimation();
+  function cycle() {
+    console.log('Cycle start');
+    hideAllWords();
+    showMultipleRandomWords();
+    animationInterval = setTimeout(() => {
+      console.log('Cycle end');
+      cycle();
+    }, 4000);
+  }
+  cycle();
+}
+
+function stopAnimation() {
+  console.log('Stopping animation');
+  if (animationInterval) {
+    clearTimeout(animationInterval);
+    animationInterval = null;
+  }
+}
+
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    stopAnimation();
+    hideAllWords();
+
+    if (query === '') {
+      startAnimation();
+    } else {
+      const matches = wordElements.filter(el => {
+        const jp = el.dataset.jp;
+        const romaji = el.dataset.romaji;
+        const en = el.dataset.en;
+        const np = el.dataset.np;
+        return jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
+      });
+
+      matches.forEach((el, i) => {
+        const top = (i % 3) * 90;
+        const left = 20 + (i % 2) * 200;
+        el.style.top = `${top}px`;
+        el.style.left = `${left}px`;
+        el.classList.add('visible');
+      });
+    }
+  });
+
+  startAnimation();
+}
+
 
 function renderHiragana(hiragana) {
   const section = document.getElementById('hiragana');
@@ -36,7 +182,7 @@ function renderHiragana(hiragana) {
   // Build the HTML content for the Hiragana chart
   section.innerHTML = `
     <div class="card">
-      <h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With sound🔊]</h2>
+      <h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With Sound 🔊]</h2>
       ${Object.entries(hiragana).map(([group, chars]) => `
         <h3>${group}</h3>
         <div class="hiragana-grid">
@@ -84,9 +230,10 @@ function renderHiragana(hiragana) {
   });
 }
 
+
 function renderKatakana(katakana) {
   const section = document.getElementById('katakana');
-  section.innerHTML = `<div class="card"><h2>katakana-Chart&nbsp;&nbsp;&nbsp;[With sound🔊]</h2>
+  section.innerHTML = `<div class="card"><h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With Sound 🔊]</h2>
     ${Object.entries(katakana).map(([group, chars]) => `
       <h3>${group}</h3>
       <div class="katakana-grid">
@@ -100,24 +247,16 @@ function renderKatakana(katakana) {
     `).join('')}
   </div>`;
 
-  // Initialize a single reusable audio player
-  const audioPlayer = new Audio();
-  audioPlayer.preload = 'auto'; // or 'none' if needed
-
-  // Select all characters with audio
   const chars = section.querySelectorAll('.char-japanese');
+  const audioPlayer = new Audio();
 
-  // Attach audio play behavior
   chars.forEach(charEl => {
     ['mouseenter', 'click'].forEach(event => {
       charEl.addEventListener(event, () => {
         const src = charEl.getAttribute('data-audio');
         if (!src) return;
 
-        const currentSrc = audioPlayer.src.split('/').pop(); // filename only
-        const newSrc = src.split('/').pop();
-
-        if (currentSrc !== newSrc) {
+        if (audioPlayer.src !== src) {
           audioPlayer.pause();
           audioPlayer.src = src;
         }
@@ -133,87 +272,6 @@ function renderKatakana(katakana) {
   });
 }
 
-const selectedWords = [];
-
-function renderVocabulary(vocab) {
-  const section = document.getElementById('vocabulary');
-  section.innerHTML = `
-    <input
-      id="vocab-search"
-      type="text"
-      placeholder="🔍Search vocabulary....."
-      style="margin-bottom: 1rem; padding: 0.5rem; width: 100%; font-size: 1.5rem; border-radius: 6px; border: 1px solid #ccc;"
-    />
-    <div class="vocab-container">
-      <h2>Vocabulary</h2>
-      <div class="words-grid">
-        ${Object.entries(vocab).map(([jpWord, entries], groupIndex) =>
-          entries.map((entry, index) => {
-            const cardId = `word-${groupIndex}-${index}`;
-            return `
-              <div class="word-card" id="${cardId}" onclick="toggleWord('${cardId}', '${jpWord}', '${entry.romaji}', '${entry.en}', '${entry.np}')">
-                <p><strong>${jpWord}</strong></p>
-                <p class="romaji">${entry.romaji}</p>
-                <p class="en">${entry.en}</p>
-                <p class="np">${entry.np}</p>
-              </div>
-            `;
-          }).join('')
-        ).join('')}
-      </div>
-    </div>
-  `;
-
-
-// Add search functionality here
-const searchInput = document.getElementById('vocab-search');
-const cards = section.querySelectorAll('.word-card');
-
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.toLowerCase();
-
-  cards.forEach(card => {
-    const jp = card.querySelector('p strong')?.textContent.toLowerCase() || '';
-    const romaji = card.querySelector('.romaji')?.textContent.toLowerCase() || '';
-    const en = card.querySelector('.en')?.textContent.toLowerCase() || '';
-    const np = card.querySelector('.np')?.textContent.toLowerCase() || '';
-
-    const matches = jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
-
-    card.style.display = matches ? '' : 'none';
-  });
-});
-}
-
-function toggleWord(cardId, jp, romaji, en ,np) {
-  const card = document.getElementById(cardId);
-  if (!card) return;
-
-  const romajiEl = card.querySelector('.romaji');
-  const enEl = card.querySelector('.en');
-  const npEl = card.querySelector('.np');
-
-  const index = selectedWords.findIndex(
-    item => item.jp === jp && item.romaji === romaji && item.en === en && item.np === np
-  );
-  if (index !== -1) {
-    // Already selected — unselect it
-    selectedWords.splice(index, 1);
-    romajiEl.style.display = 'block';
-    enEl.style.display = 'block';
-    npEl.style.display = 'block';
-    card.classList.remove('selected');
-  } else {
-    // Not selected — select it
-    selectedWords.push({ jp, romaji, en,np });
-    romajiEl.style.display = 'none';
-    enEl.style.display = 'none';
-    npEl.style.display = 'none';
-    card.classList.add('selected');
-  }
-
-  console.log(selectedWords);
-}
 
 
 function renderKanjiLevels(levelsData, kanjiDescriptions) {
