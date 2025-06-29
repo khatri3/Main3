@@ -133,18 +133,88 @@ function renderKatakana(katakana) {
   });
 }
 
+const selectedWords = [];
+
 function renderVocabulary(vocab) {
   const section = document.getElementById('vocabulary');
   section.innerHTML = `
-    <div class="card"><h2>Vocabulary</h2></div>
-    ${Object.entries(vocab).map(([title, words]) => `
-      <div class="lesson-item">
-        <h3>${title}</h3>
-        ${words.map(w => `<p><strong>${w.jp}</strong> (${w.romaji}) - ${w.en}</p>`).join('')}
+    <input
+      id="vocab-search"
+      type="text"
+      placeholder="🔍Search vocabulary....."
+      style="margin-bottom: 1rem; padding: 0.5rem; width: 100%; font-size: 1.5rem; border-radius: 6px; border: 1px solid #ccc;"
+    />
+    <div class="vocab-container">
+      <h2>Vocabulary</h2>
+      <div class="words-grid">
+        ${Object.entries(vocab).map(([jpWord, entries], groupIndex) =>
+          entries.map((entry, index) => {
+            const cardId = `word-${groupIndex}-${index}`;
+            return `
+              <div class="word-card" id="${cardId}" onclick="toggleWord('${cardId}', '${jpWord}', '${entry.romaji}', '${entry.en}', '${entry.np}')">
+                <p><strong>${jpWord}</strong></p>
+                <p class="romaji">${entry.romaji}</p>
+                <p class="en">${entry.en}</p>
+                <p class="np">${entry.np}</p>
+              </div>
+            `;
+          }).join('')
+        ).join('')}
       </div>
-    `).join('')}
+    </div>
   `;
+
+
+// Add search functionality here
+const searchInput = document.getElementById('vocab-search');
+const cards = section.querySelectorAll('.word-card');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+
+  cards.forEach(card => {
+    const jp = card.querySelector('p strong')?.textContent.toLowerCase() || '';
+    const romaji = card.querySelector('.romaji')?.textContent.toLowerCase() || '';
+    const en = card.querySelector('.en')?.textContent.toLowerCase() || '';
+    const np = card.querySelector('.np')?.textContent.toLowerCase() || '';
+
+    const matches = jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
+
+    card.style.display = matches ? '' : 'none';
+  });
+});
 }
+
+function toggleWord(cardId, jp, romaji, en ,np) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
+
+  const romajiEl = card.querySelector('.romaji');
+  const enEl = card.querySelector('.en');
+  const npEl = card.querySelector('.np');
+
+  const index = selectedWords.findIndex(
+    item => item.jp === jp && item.romaji === romaji && item.en === en && item.np === np
+  );
+  if (index !== -1) {
+    // Already selected — unselect it
+    selectedWords.splice(index, 1);
+    romajiEl.style.display = 'block';
+    enEl.style.display = 'block';
+    npEl.style.display = 'block';
+    card.classList.remove('selected');
+  } else {
+    // Not selected — select it
+    selectedWords.push({ jp, romaji, en,np });
+    romajiEl.style.display = 'none';
+    enEl.style.display = 'none';
+    npEl.style.display = 'none';
+    card.classList.add('selected');
+  }
+
+  console.log(selectedWords);
+}
+
 
 function renderKanjiLevels(levelsData, kanjiDescriptions) {
   const container = document.getElementById('levels-container');
