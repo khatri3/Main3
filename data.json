@@ -283,17 +283,157 @@
 
 
   "quiz": [
-    {
-      "question": "What does 'こんにちは' mean?",
-      "options": ["Good morning", "Hello", "Good evening", "Goodbye"],
-      "correct": 1
-    },
-    {
-      "question": "How do you say 'Thank you' in Japanese?",
-      "options": ["すみません", "ありがとう", "さようなら", "おはよう"],
-      "correct": 1
-    }
- ],
+  {
+    "question": "What does 'こんにちは' mean?",
+    "options": ["Good morning", "Hello", "Good evening", "Goodbye"],
+    "correct": 1
+  },
+  {
+    "question": "What is the meaning of 'ありがとう'?",
+    "options": ["Please", "Sorry", "Thank you", "Excuse me"],
+    "correct": 2
+  },
+  {
+    "question": "What does 'さようなら' mean?",
+    "options": ["See you", "Goodbye", "Good night", "Hello"],
+    "correct": 1
+  },
+  {
+    "question": "What is '水 (みず)' in English?",
+    "options": ["Fire", "Earth", "Water", "Wind"],
+    "correct": 2
+  },
+  {
+    "question": "What does 'はい' mean?",
+    "options": ["No", "Yes", "Maybe", "Okay"],
+    "correct": 1
+  },
+  {
+    "question": "What is the English meaning of '猫 (ねこ)'?",
+    "options": ["Dog", "Mouse", "Cat", "Bird"],
+    "correct": 2
+  },
+  {
+    "question": "What does '先生 (せんせい)' mean?",
+    "options": ["Doctor", "Student", "Teacher", "Police officer"],
+    "correct": 2
+  },
+  {
+    "question": "What is the meaning of '学校 (がっこう)'?",
+    "options": ["Library", "School", "Store", "Office"],
+    "correct": 1
+  },
+  {
+    "question": "What does 'すみません' mean?",
+    "options": ["Thank you", "You're welcome", "Excuse me / Sorry", "Good morning"],
+    "correct": 2
+  },
+  {
+    "question": "What is '友達 (ともだち)' in English?",
+    "options": ["Friend", "Enemy", "Teacher", "Parent"],
+    "correct": 0
+  },
+  {
+    "question": "What is the Japanese word for 'dog'?",
+    "options": ["ねこ", "いぬ", "とり", "うま"],
+    "correct": 1
+  },
+  {
+    "question": "What does 'こんばんは' mean?",
+    "options": ["Good morning", "Good afternoon", "Good evening", "Goodbye"],
+    "correct": 2
+  },
+  {
+    "question": "What is the meaning of 'いいえ'?",
+    "options": ["Yes", "No", "Maybe", "Okay"],
+    "correct": 1
+  },
+  {
+    "question": "What is '日本 (にほん)' in English?",
+    "options": ["China", "Japan", "Korea", "Thailand"],
+    "correct": 1
+  },
+  {
+    "question": "What does '学生 (がくせい)' mean?",
+    "options": ["Teacher", "Student", "Worker", "Parent"],
+    "correct": 1
+  },
+  {
+    "question": "What is the Japanese word for 'book'?",
+    "options": ["ほん", "えんぴつ", "がっこう", "じしょ"],
+    "correct": 0
+  },
+  {
+    "question": "What does 'おはよう' mean?",
+    "options": ["Hello", "Good morning", "Good night", "Good evening"],
+    "correct": 1
+  },
+  {
+    "question": "What is '山 (やま)' in English?",
+    "options": ["River", "Tree", "Mountain", "Sky"],
+    "correct": 2
+  },
+  {
+    "question": "What is the meaning of '川 (かわ)'?",
+    "options": ["River", "Fire", "Field", "Rain"],
+    "correct": 0
+  },
+  {
+    "question": "What does '電車 (でんしゃ)' mean?",
+    "options": ["Bus", "Car", "Bicycle", "Train"],
+    "correct": 3
+  },
+  {
+    "question": "What is '青 (あお)' in English?",
+    "options": ["Red", "Green", "Blue", "Yellow"],
+    "correct": 2
+  },
+  {
+    "question": "What does '赤 (あか)' mean?",
+    "options": ["Red", "Green", "Blue", "Yellow"],
+    "correct": 0
+  },
+  {
+    "question": "What is the meaning of '黒 (くろ)'?",
+    "options": ["White", "Black", "Brown", "Gray"],
+    "correct": 1
+  },
+  {
+    "question": "What does '白 (しろ)' mean?",
+    "options": ["Black", "Yellow", "White", "Red"],
+    "correct": 2
+  },
+  {
+    "question": "What is '天気 (てんき)' in English?",
+    "options": ["Sky", "Weather", "Season", "Air"],
+    "correct": 1
+  },
+  {
+    "question": "What does '元気 (げんき)' mean?",
+    "options": ["Tired", "Happy", "Energetic / Healthy", "Sad"],
+    "correct": 2
+  },
+  {
+    "question": "What is '今日 (きょう)' in English?",
+    "options": ["Tomorrow", "Yesterday", "Today", "Now"],
+    "correct": 2
+  },
+  {
+    "question": "What does '明日 (あした)' mean?",
+    "options": ["Today", "Tomorrow", "Yesterday", "Later"],
+    "correct": 1
+  },
+  {
+    "question": "What is the meaning of '時 (とき)'?",
+    "options": ["Day", "Night", "Time", "Year"],
+    "correct": 2
+  },
+  {
+    "question": "What does '月 (つき)' mean?",
+    "options": ["Sun", "Moon", "Star", "Sky"],
+    "correct": 1
+  }
+],
  
 "Kanji": [
     { "char": "N5", "romaji": "Beginner" },
