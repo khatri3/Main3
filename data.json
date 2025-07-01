@@ -437,7 +437,7 @@
       { "char": "県", "furigana": "けん", "meaning": "prefecture", "nepali": "प्रदेश (जापान)" },
       { "char": "庫", "furigana": "こ", "meaning": "warehouse", "nepali": "भण्डारण" },
       { "char": "向", "furigana": "むく / こう", "meaning": "face, turn", "nepali": "तर्फ, फर्कनु" },
-      { "char": "幸", "furigana": "しあわせ / こう", "meaning": "happiness", "nepali": "खुशी" }
+      { "char": "幸", "furigana": "しあわせ / こう", "meaning": "happiness", "nepali": "खुशी" },
       { "char": "建", "furigana": "けん / たてる", "meaning": "build", "nepali": "निर्माण गर्नु" },
       { "char": "験", "furigana": "けん", "meaning": "test", "nepali": "परीक्षा" },
       { "char": "固", "furigana": "こ / かたい", "meaning": "hard, firm", "nepali": "कडा" },
@@ -467,7 +467,7 @@
       { "char": "事", "furigana": "こと / じ", "meaning": "matter, thing", "nepali": "कुरा, विषय" },
       { "char": "持", "furigana": "もつ / じ", "meaning": "hold", "nepali": "पकड्नु" },
       { "char": "次", "furigana": "つぎ / じ", "meaning": "next", "nepali": "अर्को" },
-      { "char": "式", "furigana": "しき", "meaning": "ceremony", "nepali": "समारोह" }
+      { "char": "式", "furigana": "しき", "meaning": "ceremony", "nepali": "समारोह" },
       { "char": "実", "furigana": "じつ / み", "meaning": "truth, reality", "nepali": "सत्य, वास्तविकता" },
       { "char": "写", "furigana": "しゃ / うつす", "meaning": "copy, photograph", "nepali": "नक्कल, फोटो" },
       { "char": "者", "furigana": "しゃ / もの", "meaning": "person", "nepali": "व्यक्ति" },
@@ -498,7 +498,7 @@
       { "char": "整", "furigana": "ととのえる / せい", "meaning": "arrange", "nepali": "ठिक पार्नु" },
       { "char": "昔", "furigana": "むかし", "meaning": "old times", "nepali": "पुरानो समय" },
       { "char": "全", "furigana": "ぜん", "meaning": "whole", "nepali": "पूरा" },
-      { "char": "相", "furigana": "あい / そう", "meaning": "mutual, minister", "nepali": "आपसी, मन्त्री" }
+      { "char": "相", "furigana": "あい / そう", "meaning": "mutual, minister", "nepali": "आपसी, मन्त्री" },
       { "char": "送", "furigana": "おくる / そう", "meaning": "send", "nepali": "पठाउनु" },
       { "char": "続", "furigana": "つづく / ぞく", "meaning": "continue", "nepali": "जारी राख्नु" },
       { "char": "卒", "furigana": "そつ", "meaning": "graduate", "nepali": "स्नातक" },
