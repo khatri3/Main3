@@ -307,7 +307,7 @@ nav {
   .hiragana-grid,
   .kanji-grid,
   .katakana-grid {
-    grid-template-columns: repeat(5, 1fr);
+    rid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 0.5rem;
   }
 
