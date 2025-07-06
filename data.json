@@ -9,6 +9,15 @@
       { "icon": "🎯", "title": "Test Knowledge", "desc": "Take quizzes and track your progress." }
     ]
   },
+  "hiraganaD": {
+    "description": "ひらがなについて",
+    "features": []
+  },
+  
+    "katakanaD": {
+    "description": "ひらがなについて",
+    "features": []
+  },
  "hiragana": {
     "あ(A)": [
       { "char": "あ", "romaji": "a","audio": "audio/a.mp3" },
