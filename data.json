@@ -18,6 +18,12 @@
     "description": "カタカナについて",
     "features": []
   },
+
+    "katakanaD": {
+    "description": "カタカナについて",
+    "features": []
+  },
+  
  "hiragana": {
     "あ(A)": [
       { "char": "あ", "romaji": "a","audio": "audio/a.mp3" },
