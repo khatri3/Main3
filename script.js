@@ -3,8 +3,8 @@ async function loadApp() {
   const data = await res.json();
 
   renderHome(data.home, data.words);
-  renderHiragana(data.hiragana);
-  renderKatakana(data.katakana);
+  renderKatakana(data.katakana,data.hiraganaD);
+  renderKatakana(data.katakana,data.katakanaD);
   renderQuiz(data.quiz);
   renderKanjiLevels(data.KanjiLevels, data.Kanji);
   setupNavigation();
@@ -183,11 +183,13 @@ searchInput.addEventListener('input', () => {
   startAnimation();
 }
 
-function renderHiragana(hiragana) {
+function renderHiragana(hiragana,hiraganaD) {
   const section = document.getElementById('hiragana');
-
   // Build the HTML content for the Hiragana chart
   section.innerHTML = `
+    <div class="card">
+      <p>${hiraganaD.description}</p>
+    </div>
     <div class="card">
       <h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With Sound 🔊]</h2>
       ${Object.entries(hiragana).map(([group, chars]) => `
@@ -238,9 +240,13 @@ function renderHiragana(hiragana) {
 }
 
 
-function renderKatakana(katakana) {
+function renderHiragana(hiragana,katakanaD) {
   const section = document.getElementById('katakana');
-  section.innerHTML = `<div class="card"><h2>Hiragana-Chart&nbsp;&nbsp;&nbsp;[With Sound 🔊]</h2>
+  section.innerHTML = `
+    <div class="card">
+      <p>${katakanaD.description}</p>
+    </div>  
+    <div class="card"><h2>katakana-Chart&nbsp;&nbsp;&nbsp;[With Sound 🔊]</h2>
     ${Object.entries(katakana).map(([group, chars]) => `
       <h3>${group}</h3>
       <div class="katakana-grid">
