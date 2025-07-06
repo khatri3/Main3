@@ -6,9 +6,7 @@ async function loadApp() {
   renderHiragana(data.hiragana,data.hiraganaD);
   renderKatakana(data.katakana,data.katakanaD);
   renderKanjiLevels(data.KanjiLevels, data.Kanji, data.kanjiD);
-
   renderQuiz(data.quiz);
-  renderKanjiLevels(data.KanjiLevels, data.Kanji);
   setupNavigation();
 }
 
