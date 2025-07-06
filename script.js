@@ -5,6 +5,8 @@ async function loadApp() {
   renderHome(data.home, data.words);
   renderHiragana(data.hiragana,data.hiraganaD);
   renderKatakana(data.katakana,data.katakanaD);
+  renderKanjiLevels(data.KanjiLevels, data.Kanji,data.kanjiD);
+
   renderQuiz(data.quiz);
   renderKanjiLevels(data.KanjiLevels, data.Kanji);
   setupNavigation();
@@ -287,7 +289,7 @@ function renderKatakana(katakana,katakanaD) {
 
 
 
-function renderKanjiLevels(levelsData, kanjiDescriptions) {
+function renderKanjiLevels(levelsData, kanjiDescriptions,kanjiD) {
   const container = document.getElementById('levels-container');
   const descEl = document.getElementById('kanji-desc');
   let activeLevel = null;
@@ -302,6 +304,9 @@ function renderKanjiLevels(levelsData, kanjiDescriptions) {
     const description = descObj ? descObj.romaji : "No description available";
 
     return `
+      <div class="card">
+      <p>${hiraganaD.description}</p>
+    </div>
       <div class="kanji-level-card" data-level="${level}">
         <h3>${level}</h3>
         <p class="level-desc">${description}</p>
