@@ -152,6 +152,8 @@ nav {
   margin-top: 1rem;
 }
 
+/* Adjust for smaller screens */
+@media (max-width: 600px) {
 .hiragana-char,
 .kanji-char,
 .katakana-char {
@@ -163,6 +165,9 @@ nav {
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: bold;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  }
 }
 
 .hiragana-char:hover,
