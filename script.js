@@ -3,7 +3,7 @@ async function loadApp() {
   const data = await res.json();
 
   renderHome(data.home, data.words);
-  renderKatakana(data.katakana,data.hiraganaD);
+  renderKatakana(data.hiragana,data.hiraganaD);
   renderKatakana(data.katakana,data.katakanaD);
   renderQuiz(data.quiz);
   renderKanjiLevels(data.KanjiLevels, data.Kanji);
@@ -240,7 +240,7 @@ function renderHiragana(hiragana,hiraganaD) {
 }
 
 
-function renderHiragana(hiragana,katakanaD) {
+function renderKatakana(katakana,katakanaD) {
   const section = document.getElementById('katakana');
   section.innerHTML = `
     <div class="card">
