@@ -16,7 +16,7 @@ function renderHome(home, words) {
     <input
       id="words-search"
       type="text"
-      placeholder="🔍 Search your words..."
+      placeholder="🔍 Search your words."
       class="search-bar"
     />
 
