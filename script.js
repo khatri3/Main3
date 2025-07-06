@@ -144,47 +144,41 @@ function stopAnimation() {
     animationInterval = null;
   }
 }
-
-
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase().trim();
   stopAnimation();
   hideAllWords();
 
   if (query === '') {
-    // Reset styles for animation display
-    wordElements.forEach(word => {
-      word.style.position = 'absolute';
-      word.style.top = '';
-      word.style.left = '';
-      word.style.marginBottom = '';
-      word.style.display = 'none';
-      word.classList.remove('visible');
-    });
     startAnimation();
   } else {
-    // Show matching words stacked vertically
     const matches = wordElements.filter(el => {
-      const jp = el.dataset.jp;
-      const romaji = el.dataset.romaji;
-      const en = el.dataset.en;
-      const np = el.dataset.np;
-      return jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
+      const jp = el.dataset.jp || '';
+      const romaji = el.dataset.romaji || '';
+      const en = el.dataset.en || '';
+      const np = el.dataset.np || '';
+      return jp.toLowerCase().includes(query) || 
+             romaji.toLowerCase().includes(query) || 
+             en.toLowerCase().includes(query) || 
+             np.toLowerCase().includes(query);
     });
 
-    matches.forEach(el => {
-      el.style.position = 'relative'; // normal flow for scrolling
-      el.style.top = 'auto';
-      el.style.left = 'auto';
-      el.style.marginBottom = '1rem';
-      el.style.display = 'flex';
+    console.log('Matches found:', matches.length);
+
+    matches.forEach((el, i) => {
+      const top = (i % 3) * 90;
+      const left = 20 + (i % 2) * 200;
+      el.style.top = `${top}px`;
+      el.style.left = `${left}px`;
+      el.style.position = 'absolute';  // ensure positioning
       el.classList.add('visible');
+      el.style.display = 'flex';       // ensure shown
     });
   }
 });
+
   startAnimation();
 }
-
 
 function renderHiragana(hiragana) {
   const section = document.getElementById('hiragana');
