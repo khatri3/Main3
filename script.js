@@ -3,7 +3,7 @@ async function loadApp() {
   const data = await res.json();
 
   renderHome(data.home, data.words);
-  renderKatakana(data.hiragana,data.hiraganaD);
+  renderHiragana(data.hiragana,data.hiraganaD);
   renderKatakana(data.katakana,data.katakanaD);
   renderQuiz(data.quiz);
   renderKanjiLevels(data.KanjiLevels, data.Kanji);
