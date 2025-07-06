@@ -170,8 +170,8 @@ nav {
   .hiragana-char,
   .kanji-char,
   .katakana-char {
-    font-size: 0.65rem !important;
-    padding: 0.3rem !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem !important;
   }
 }
 
