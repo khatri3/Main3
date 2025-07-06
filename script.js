@@ -321,7 +321,6 @@ function renderKanjiLevels(levelsData, kanjiDescriptions, kanjiD) {
 
   // Combine and render
   container.innerHTML = headerCard + levelCards;
-}
 
   // Click event for selecting a level
   container.addEventListener('click', e => {
