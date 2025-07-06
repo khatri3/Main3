@@ -86,14 +86,19 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  overflow-x: auto;
 }
 
 .nav-menu {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 1rem;
   list-style: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 1rem;
 }
 
 .nav-menu li {
@@ -102,6 +107,7 @@ nav {
   border-radius: 25px;
   transition: all 0.3s ease;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-menu li:hover,
