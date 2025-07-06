@@ -171,9 +171,8 @@ nav {
   .hiragana-char,
   .kanji-char,
   .katakana-char {
-    font-size: 0.3rem;   /* smaller font */
-    padding: 0.2rem;      /* smaller padding */
-    border: 2px solid #d0d0d0; /* optional: thicker border on mobile */
+    font-size: 0.2rem;   /* smaller font */
+    padding: 0.1rem;      /* smaller padding */
   }
 }
 
