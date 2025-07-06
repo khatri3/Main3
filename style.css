@@ -103,13 +103,17 @@ nav {
 .nav-menu {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 align items to start for scroll */
   align-items: center;
   list-style: none;
-  overflow: hidden;
+  overflow-x: auto;            /* ✅ allow horizontal scroll */
+  scrollbar-width: none;       /* (optional) hide scrollbar in Firefox */
+  -ms-overflow-style: none;    /* (optional) hide scrollbar in IE */
 }
 
-
+.nav-menu::-webkit-scrollbar {
+  display: none; /* (optional) hide scrollbar in Chrome */
+}
 .nav-menu li {
   cursor: pointer;
   padding: 0.5rem 1rem;
