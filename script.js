@@ -314,14 +314,20 @@ function renderKanjiLevels(levelsData, kanjiDescriptions) {
   <div id="kanji-list">
     ${
       kanjiList.length > 0
-        ? kanjiList.map(k => `
-            <div class="kanji-item">
-              <span class="kanji-char">${k.char}</span>
-              <span class="kanji-furigana">${k.furigana}</span>
-              <span class="kanji-meaning">${k.meaning}</span>
-              <span class="kanji-nepali">${k.nepali}</span>
-            </div>
-          `).join('')
+      
+      ? kanjiList.map(k => `
+        <div class="kanji-item">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: baseline;">
+            <span class="kanji-char"><strong>${k.char}</strong></span>
+            <span class="kanji-furigana">${k.furigana}</span>
+            <span class="kanji-meaning">${k.meaning}</span>
+            <span class="kanji-nepali">${k.nepali}</span>
+          </div>
+          <div class="kanji-readings" style="margin-left: 2rem; color: #555;">
+            ${k.readings || ""}
+          </div>
+        </div>
+      `).join('')
         : `<p>No kanji data available for ${level}</p>`
     }
   </div>
