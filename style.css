@@ -503,10 +503,9 @@ nav {
 }
 
 #words-popup-container {
-  overflow: hidden;
+  overflow-y: auto;     /* ✅ allow vertical scroll */
   position: relative;
-  height: 350px; /* Increased from 300px */
-  width: 100%;
+  max-height: 300px;     /* or use `height: auto` */
 }
 
     .word-popup {
