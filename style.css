@@ -183,17 +183,23 @@ nav {
   transform: scale(1.1);
 }
 
+/* Default */
 .char-japanese {
   font-size: 2rem;
   color: #667eea;
   font-weight: 300;
 }
 
-.char-romaji {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
+/* On mobile */
+@media (max-width: 600px) {
+  .char-japanese {
+    font-size: 1.2rem;
+  }
+  .char-romaji {
+    font-size: 0.7rem;
+  }
 }
+
 
 /* ========== Lesson ========== */
 .lesson-item {
