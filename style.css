@@ -428,16 +428,25 @@ nav {
   box-shadow: 0 3px 6px rgba(102, 126, 234, 0.5);
 }
 
+
 .kanji-item {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid #ccc;  /* adds a line below each item */
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
 }
 
+.kanji-char {
+  font-size: 1.5rem;
+  color: #222;
+}
 
+.kanji-readings {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+  margin-left: 2rem;
+}
 .kanji-char, .kanji-furigana, .kanji-meaning, .kanji-nepali {
   font-family: 'Roboto', sans-serif;
   transform: none;
@@ -452,7 +461,10 @@ nav {
   font-size: 1rem;
   color: #444;
   transition: all 0.3s ease;
-  display: none;  /* HIDE BY DEFAULT */
+  display: none;
+
+  max-height: 70vh;
+  overflow-y: auto;
 }
 #levels-container {
   display: flex;
