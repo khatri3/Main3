@@ -154,19 +154,18 @@ nav {
 
 /* Adjust for smaller screens */
 @media (max-width: 600px) {
-.hiragana-char,
-.kanji-char,
-.katakana-char {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 0.4rem;
-  font-size: 0.8rem;
+  .hiragana-char,
+  .kanji-char,
+  .katakana-char {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.4rem;
+    font-size: 0.8rem;
   }
 }
 
