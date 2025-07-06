@@ -144,6 +144,8 @@ function stopAnimation() {
     animationInterval = null;
   }
 }
+
+
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase().trim();
   stopAnimation();
@@ -176,6 +178,7 @@ searchInput.addEventListener('input', () => {
     });
   }
 });
+
 
   startAnimation();
 }
