@@ -151,28 +151,29 @@ nav {
   gap: 1rem;
   margin-top: 1rem;
 }
+
 .hiragana-char,
 .kanji-char,
 .katakana-char {
   background: white;
-  border: clamp(1px, 0.4vw, 2px) solid #e0e0e0;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
   padding: 0.7rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1rem; /* default for desktop */
 }
 
-/* On small screens, reduce border size */
+/* Mobile: smaller font, tighter padding */
 @media (max-width: 600px) {
   .hiragana-char,
   .kanji-char,
   .katakana-char {
-    border-width: 1px;
-    padding: 0.4rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;   /* smaller font */
+    padding: 0.4rem;      /* smaller padding */
+    border: 3px solid #d0d0d0; /* optional: thicker border on mobile */
   }
 }
 
