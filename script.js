@@ -289,7 +289,7 @@ function renderKatakana(katakana,katakanaD) {
 
 
 
-function renderKanjiLevels(levelsData, kanjiDescriptions,kanjiD) {
+function renderKanjiLevels(levelsData, kanjiDescriptions, kanjiD) {
   const container = document.getElementById('levels-container');
   const descEl = document.getElementById('kanji-desc');
   let activeLevel = null;
@@ -298,15 +298,19 @@ function renderKanjiLevels(levelsData, kanjiDescriptions,kanjiD) {
   descEl.style.display = 'none';
   container.style.display = 'flex'; // Ensure it's visible on load
 
-  // Render all level cards
-  container.innerHTML = Object.keys(levelsData).map(level => {
+  // Generate kanjiD.description once
+  const headerCard = `
+    <div class="card">
+      <p>${kanjiD.description}</p>
+    </div>
+  `;
+
+  // Generate all level cards
+  const levelCards = Object.keys(levelsData).map(level => {
     const descObj = kanjiDescriptions.find(k => k.char === level);
     const description = descObj ? descObj.romaji : "No description available";
 
     return `
-      <div class="card">
-      <p>${kanjiD.description}</p>
-    </div>
       <div class="kanji-level-card" data-level="${level}">
         <h3>${level}</h3>
         <p class="level-desc">${description}</p>
@@ -314,6 +318,10 @@ function renderKanjiLevels(levelsData, kanjiDescriptions,kanjiD) {
       </div>
     `;
   }).join('');
+
+  // Combine and render
+  container.innerHTML = headerCard + levelCards;
+}
 
   // Click event for selecting a level
   container.addEventListener('click', e => {
