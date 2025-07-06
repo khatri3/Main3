@@ -305,7 +305,7 @@ function renderKanjiLevels(levelsData, kanjiDescriptions,kanjiD) {
 
     return `
       <div class="card">
-      <p>${hiraganaD.description}</p>
+      <p>${kanjiD.description}</p>
     </div>
       <div class="kanji-level-card" data-level="${level}">
         <h3>${level}</h3>
