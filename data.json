@@ -444,7 +444,7 @@
   ],
   "KanjiLevels": {
   "N5": [
-      { "char": "一", "furigana": "いち", "meaning": "one", "nepali": "एक" },
+      { "char": "一", "furigana": "いち", "meaning": "one", "nepali": "एक","readings": "On'yomi: イチ, Kun'yomi: ひとつ" },
       { "char": "二", "furigana": "に", "meaning": "two", "nepali": "दुई" },
       { "char": "三", "furigana": "さん", "meaning": "three", "nepali": "तीन" },
       { "char": "四", "furigana": "し / よん", "meaning": "four", "nepali": "चार" },
