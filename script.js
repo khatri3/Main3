@@ -146,31 +146,43 @@ function stopAnimation() {
 }
 
 
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase().trim();
-    stopAnimation();
-    hideAllWords();
+ searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  stopAnimation();
+  hideAllWords();
 
-    if (query === '') {
-      startAnimation();
-    } else {
-      const matches = wordElements.filter(el => {
-        const jp = el.dataset.jp;
-        const romaji = el.dataset.romaji;
-        const en = el.dataset.en;
-        const np = el.dataset.np;
-        return jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
-      });
+  if (query === '') {
+    // Reset words to absolute positioning for animation
+    wordElements.forEach(word => {
+      word.style.position = 'absolute';
+      word.style.top = '';
+      word.style.left = '';
+      word.style.marginBottom = '';
+      word.style.display = 'none';
+      word.classList.remove('visible');
+    });
 
-      matches.forEach((el, i) => {
-        const top = (i % 3) * 90;
-        const left = 20 + (i % 2) * 200;
-        el.style.top = `${top}px`;
-        el.style.left = `${left}px`;
-        el.classList.add('visible');
-      });
-    }
-  });
+    startAnimation();
+  } else {
+    // Show matched words in normal flow, stacked vertically
+    const matches = wordElements.filter(el => {
+      const jp = el.dataset.jp;
+      const romaji = el.dataset.romaji;
+      const en = el.dataset.en;
+      const np = el.dataset.np;
+      return jp.includes(query) || romaji.includes(query) || en.includes(query) || np.includes(query);
+    });
+
+    matches.forEach(el => {
+      el.style.position = 'relative';   // Normal flow
+      el.style.top = 'auto';
+      el.style.left = 'auto';
+      el.style.marginBottom = '1rem';   // Spacing between words
+      el.style.display = 'flex';
+      el.classList.add('visible');
+    });
+  }
+});
 
   startAnimation();
 }
