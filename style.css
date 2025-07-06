@@ -147,7 +147,7 @@ nav {
 .kanji-grid,
 .katakana-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 0.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(20px, 0.5fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -163,18 +163,20 @@ nav {
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem; /* default for desktop */
+  font-size: 1rem; /* desktop default */
 }
 
-/* Mobile: smaller font, tighter padding */
-@media (max-width: 400px) {
+/* Mobile: smaller font and tighter padding */
+@media (max-width: 480px) {
   .hiragana-char,
   .kanji-char,
   .katakana-char {
-    font-size: 0.2rem;   /* smaller font */
-    padding: 0.1rem;      /* smaller padding */
+    font-size: 0.65rem;   /* readable but compact */
+    padding: 0.3rem;
+    border-width: 2.5px;  /* optional: slightly thicker on small screens */
   }
 }
+
 
 .hiragana-char:hover,
 .kanji-char:hover,
