@@ -503,11 +503,11 @@ nav {
 }
 
 #words-popup-container {
+  overflow: hidden;
   position: relative;
-  max-height: 400px;   /* or whatever fits your design */
-  overflow-y: auto;    /* allow vertical scroll */
+  height: 350px; /* Increased from 300px */
+  width: 100%;
 }
-
 
     .word-popup {
       position: absolute;
