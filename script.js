@@ -146,13 +146,13 @@ function stopAnimation() {
 }
 
 
- searchInput.addEventListener('input', () => {
+searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase().trim();
   stopAnimation();
   hideAllWords();
 
   if (query === '') {
-    // Reset words to absolute positioning for animation
+    // Reset styles for animation display
     wordElements.forEach(word => {
       word.style.position = 'absolute';
       word.style.top = '';
@@ -161,10 +161,9 @@ function stopAnimation() {
       word.style.display = 'none';
       word.classList.remove('visible');
     });
-
     startAnimation();
   } else {
-    // Show matched words in normal flow, stacked vertically
+    // Show matching words stacked vertically
     const matches = wordElements.filter(el => {
       const jp = el.dataset.jp;
       const romaji = el.dataset.romaji;
@@ -174,16 +173,15 @@ function stopAnimation() {
     });
 
     matches.forEach(el => {
-      el.style.position = 'relative';   // Normal flow
+      el.style.position = 'relative'; // normal flow for scrolling
       el.style.top = 'auto';
       el.style.left = 'auto';
-      el.style.marginBottom = '1rem';   // Spacing between words
+      el.style.marginBottom = '1rem';
       el.style.display = 'flex';
       el.classList.add('visible');
     });
   }
 });
-
   startAnimation();
 }
 
