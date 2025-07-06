@@ -316,15 +316,6 @@ nav {
     gap: 0.5rem;
   }
 
-/* Adjust for smaller screens */
-@media (max-width: 600px) {
-  .hiragana-char,
-  .kanji-char,
-  .katakana-char {
-    padding: 0.4rem;
-    font-size: 0.8rem;
-  }
-}
   .char-japanese {
     font-size: 1.5rem;
   }
